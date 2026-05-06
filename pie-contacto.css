@@ -1,0 +1,393 @@
+/* Formulario de contacto en el pie */
+#pie-contacto fieldset {
+  border: 1px solid rgba(248, 0, 0, 0.15) !important;
+  border-radius: var(--e-radius) !important;
+  padding: 20px !important;
+}
+
+#pie-contacto legend {
+  color: #fff !important;
+  font-weight: 700 !important;
+  font-size: 15px !important;
+  padding: 0 8px !important;
+}
+
+#pie-contacto input[type="text"],
+#pie-contacto textarea {
+  width: 100% !important;
+  box-sizing: border-box !important;
+  background: rgba(255,255,255,0.08) !important;
+  border: 1px solid rgba(255,255,255,0.2) !important;
+  border-radius: var(--e-radius-sm) !important;
+  padding: 9px 14px !important;
+  color: #fff !important;
+  font-size: 13px !important;
+  margin-bottom: 8px !important;
+  transition: border-color 0.2s !important;
+}
+
+#pie-contacto input::placeholder,
+#pie-contacto textarea::placeholder {
+  color: rgba(255,255,255,0.45) !important;
+}
+
+#pie-contacto input:focus,
+#pie-contacto textarea:focus {
+  border-color: var(--e-accent) !important;
+  outline: none !important;
+  background: rgba(255,255,255,0.12) !important;
+}
+
+#pie-contacto .botonEnviar {
+  background: linear-gradient(135deg, var(--e-accent), var(--e-accent-dark)) !important;
+  color: #fff !important;
+  border: none !important;
+  border-radius: var(--e-radius-sm) !important;
+  padding: 9px 24px !important;
+  font-weight: 700 !important;
+  cursor: pointer !important;
+  transition: opacity 0.2s !important;
+}
+
+#pie-contacto .botonEnviar:hover {
+  opacity: 0.88 !important;
+}
+
+#pie-contacto .textolegal {
+  color: rgba(255,255,255,0.55) !important;
+  font-size: 11px !important;
+}
+/*----------------------------*/
+
+#modulo-pie-1 {
+    flex-direction: column;
+    color: #333;
+    overflow: visible;
+    background-color: #ebebeb;
+    margin-top: 30px;
+}
+
+#titulo-pie-pagina {
+    display: none;
+}
+
+#modulo-pie-1 #pie-fila1 {
+    display: flex;
+    width: 100%;
+}
+
+#modulo-pie-1 #pie-subfila1 {
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    padding: 20px 0;
+}
+
+#modulo-pie-1 #pie-subfila1 > div {
+    box-sizing: border-box;
+    display: flex;
+    width: 30%;
+}
+
+#textotel {
+    font-size: 12px;
+}
+
+#modulo-pie-1 #pie-menu menu {
+    width: 100%;
+}
+
+#modulo-pie-1 #pie-menu li {
+    padding: 10px 15px;
+    border-bottom: 2px solid #bfbaba;
+}
+
+#modulo-pie-1 #pie-menu li:first-child {
+    padding-top: 0;
+}
+
+#modulo-pie-1 #pie-menu li:last-child {
+    border-bottom: none;
+}
+
+#modulo-pie-1 #pie-menu li:hover {
+    color: #000;
+}
+
+#modulo-pie-1 .pie-agencia {
+    display: flex;
+    flex-direction: column;
+}
+
+#oficinasAdicionales {
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 75px auto 30px;
+    width: 100%;
+}
+
+#oficinasAdicionales > div {
+    width: 30%;
+    margin-bottom: 50px;
+}
+
+#modulo-pie-1 .pie-datosagenciaBloque1 {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+#modulo-pie-1 .pie-datosagencia li {
+    margin-bottom: 5px;
+}
+
+#modulo-pie-1 .pie-datosagencia a {
+    color: #2a6496;
+}
+
+#modulo-pie-1 .pie-datosagencia .titulo {
+    font-size: 20px;
+}
+
+#modulo-pie-1 .pie-datosagencia .ami {
+    font-size: 14px;
+}
+
+#modulo-pie-1 .pie-datosagenciaLogo img {
+    min-width: 120px;
+    max-width: 150px;
+    max-height: 120px;
+}
+
+#modulo-pie-1 #pie-contacto {
+    position: relative;
+}
+
+#modulo-pie-1 #pie-contacto form {
+    box-sizing: border-box;
+    position: absolute;
+    top: -60px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    min-width: 380px;
+    padding: 20px 30px;
+    background-color: var(--background2);
+    color: var(--color2);
+    border-radius: 10px;
+    box-shadow: 0px 1px 4px 1px #66666680;
+}
+
+#modulo-pie-1 #pie-contacto legend {
+    margin-bottom: 20px;
+    font-size: 22px;
+    color: var(--color2);
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+#modulo-pie-1 #pie-contacto dl {
+    box-sizing: border-box;
+    width: 100%;
+    margin-bottom: 20px;
+    padding-left: 10px;
+}
+
+#modulo-pie-1 #pie-contacto dl:last-child {
+    margin-bottom: 0;
+}
+
+#modulo-pie-1 #pie-contacto dt,
+#modulo-pie-1 #pie-contacto dd {
+    box-sizing: border-box;
+    display: flex;
+    width: 100%;
+}
+
+#modulo-pie-1 #pie-contacto input[type=text],
+#modulo-pie-1 #pie-contacto textarea {
+    width: 100%;
+    padding: 8px 13px;
+    font-size: 16px;
+    font-weight: normal;
+}
+
+#modulo-pie-1 .resultadoInfo {
+    display: none;
+    padding: 8px 8px 3px;
+    color: #FFF;
+    text-align: center;
+    box-shadow: 2px 2px 1px #0c980f;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-weight: bold;
+    cursor: default;
+    background-image: none;
+}
+
+#modulo-pie-1 .resultadoInfo.enviando {
+    background-image: url(../img/loading_fff.gif);
+    background-size: 25px;
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    width: 100px;
+    box-shadow: none;
+    display: inline-block;
+}
+
+#modulo-pie-1 .resultadoInfo.ok {background-color: rgb(81, 197, 60);}
+#modulo-pie-1 .resultadoInfo.ko {background-color: rgb(197, 60, 65);}
+
+#modulo-pie-1 #pie-contacto textarea {
+    height: 100px;
+}
+
+#modulo-pie-1 #pie-contacto .formCaptcha {
+    display: flex;
+}
+
+#modulo-pie-1 #pie-contacto #eltextolegal3 {
+    cursor: pointer;
+}
+
+#modulo-pie-1 #pie-contacto .enviaForm {
+    margin-left: auto;
+    padding: 10px 20px;
+    background-color: var(--background1);
+    border: 1px solid var(--background1-78);
+    color: var(--color1);
+    font-weight: bold;
+    border-radius: 3px;
+}
+
+#modulo-pie-1 .pie-iframemapa {
+    width: 100%;
+    height: 200px;
+}
+
+#modulo-pie-1 #pie-filaSocial {
+    padding: 10px 1.5%;
+    background-color: #5e5e5e;
+}
+
+#modulo-pie-1 #pie-filaSocial menu {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#modulo-pie-1 #pie-filaSocial li {
+    margin-right: 10px;
+}
+
+#modulo-pie-1 #pie-filaSocial li:last-child {
+    margin-right: 0;
+}
+
+#modulo-pie-1 #pie-filaSocial .submenu {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+    font-size: 12px;
+    color: #fff;
+}
+
+#modulo-pie-1 .botonMostarMapa {
+    margin-right: auto;
+    padding: 10px;
+    background-color: var(--background1);
+    border: 1px solid var(--background1-78);
+    color: var(--color1);
+    font-weight: bold;
+    border-radius: 3px;
+    margin-bottom:10px;
+}
+
+
+@media (max-width: 900px) {
+    #modulo-pie-1 #pie-filaSocial .submenu {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #modulo-pie-1 #pie-filaSocial .submenu span {
+        display: none;
+    }
+
+    #modulo-pie-1 #pie-filaSocial .submenu a {
+        margin-bottom: 0.5em;
+        text-align: center;
+    }
+
+}
+
+@media (max-width: 700px) {
+    #oficinasAdicionales > div {
+        width: 90%;
+    }
+
+    #modulo-pie-1 .pie-datosagenciaBloque1 {
+        flex-direction: column;
+    }
+
+    #modulo-pie-1 .pie-datosagencia li {
+        text-align: center;
+    }
+
+    #modulo-pie-1 .pie-datosagenciaLogo {
+        /* display: flex; */
+        margin: 0 auto;
+        justify-content: center;
+    }
+
+    #modulo-pie-1 .pie-datosagenciaLogo img {
+        width: 100%;
+        max-width: 320px;
+        height: auto;
+        max-height: initial;
+    }
+}
+@media (max-width: 1300px)
+{
+
+    #pie-subfila1 {
+        flex-direction: column;
+    }
+
+    #modulo-pie-1 #pie-subfila1 > div {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    #modulo-pie-1 #pie-menu li {
+        text-align: center;
+    }
+
+    #modulo-pie-1 #pie-contacto form {
+        position: static;
+        transform: initial;
+        width: 100%;
+    }
+
+    #modulo-pie-1 .pie-datosagenciaBloque1 {
+        padding-left: 2.5%;
+        padding-right: 2.5%;
+    }
+
+}
+
+@media (max-width: 400px)
+{
+
+    #modulo-pie-1 #pie-contacto form {
+        min-width: initial;
+    }
+
+}
+
+
+
+
