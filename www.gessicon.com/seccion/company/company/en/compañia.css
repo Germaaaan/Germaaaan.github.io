@@ -1,0 +1,159 @@
+/* =====================================================
+   MODULO-SECCION-1.CSS — Gessicon Inmobiliaria
+   Página "Company" / Sección de texto
+   Coherente con cabecera.css + estilo.css
+   ===================================================== */
+
+/* =====================================================
+   CONTENEDOR PRINCIPAL
+   ===================================================== */
+#modulo-seccion-1 {
+  background: var(--e-off, #F7F6F3);
+  padding: 0 0 48px 0;
+  overflow: visible;
+}
+
+/* =====================================================
+   CABECERA DE SECCIÓN
+   ===================================================== */
+#seccion-cabecera {
+  background: var(--e-navy, #1B2A4A);
+  border-bottom: 4px solid var(--e-orange, #E65B0B);
+  padding: 40px 5%;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+
+
+#seccion-cabecera::after {
+  content: '';
+  position: absolute;
+  bottom: -60px;
+  right: 10%;
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.04);
+  pointer-events: none;
+}
+
+#seccion-cabecera h1 {
+  color: #000000 !important;
+  font-size: 36px !important;
+  font-weight: 800 !important;
+  margin: 0 !important;
+  letter-spacing: -0.02em;
+  position: relative;
+  z-index: 1;
+}
+
+/* Línea naranja decorativa debajo del título */
+#seccion-cabecera h1::after {
+  content: '';
+  display: block;
+  width: 56px;
+  height: 4px;
+  background: linear-gradient(90deg, #E65B0B, #FF8040);
+  border-radius: 2px;
+  margin-top: 12px;
+}
+
+/* =====================================================
+   CUERPO DE SECCIÓN (Aumentamos el ancho máximo)
+   ===================================================== */
+#seccion-cuerpo {
+  max-width: 1100px; /* Antes 860px - Ahora más ancho */
+  margin: 0 auto;
+  padding: 48px 5%;
+  box-sizing: border-box;
+  /* ========================================== */
+  /* PADDING PERSONALIZADO: */
+  /* Arriba: 50px | Derecha: 60px | Abajo: 50px | Izquierda: 90px */
+  padding: 50px 60px 50px 500px; 
+  /* ========================================== */
+}
+/* =====================================================
+   ARTÍCULO CON COMILLAS (Forzado al centro de la pantalla)
+   ===================================================== */
+#seccion-cuerpo .textoComillas {
+  position: relative !important;
+  box-sizing: border-box !important;
+  
+  /* Tu padding extra a la izquierda se mantiene */
+  padding: 50px 60px 50px 90px !important; 
+  
+  background: #ffffff !important;
+  border-radius: 12px !important;
+  border: 1px solid #E4E1DA !important;
+  border-top: 5px solid #E65B0B !important; 
+  box-shadow: 0 4px 24px rgba(0,0,0,0.07) !important;
+  
+  /* Alineación interna */
+  text-align: center !important; 
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+
+  /* ================================================== */
+  /* CONTROL DE ANCHO Y DESBLOQUEO DE POSICIÓN: */
+  display: flex !important;
+  float: none !important;          /* Rompe cualquier alineación antigua a la izquierda */
+  clear: both !important;          /* Evita que elementos flotantes lo empujen */
+  width: 90% !important;           /* Deja un 10% de margen total en la pantalla */
+  max-width: 800px !important;     /* El tamaño máximo de la caja */
+  
+  /* TRUCO MAESTRO: Si margin: auto falla, usamos un margen izquierdo calculado */
+  margin-left: auto !important;
+  margin-right: auto !important;
+  margin-top: 40px !important;
+  margin-bottom: 40px !important;
+  /* ================================================== */
+}
+
+/* Comilla decorativa (Centrada ópticamente) */
+#seccion-cuerpo .textoComillas::before {
+  content: '\201C' !important;
+  position: static !important; 
+  display: block !important;
+  font-size: 90px !important;
+  font-family: Georgia, 'Times New Roman', serif !important;
+  color: #E65B0B !important;
+  line-height: 1 !important;
+  opacity: 0.35 !important;
+  margin-bottom: -20px !important; 
+  margin-left: -30px !important;  /* Compensa el padding-left de 90px */
+}
+
+#seccion-cuerpo .textoComillas p {
+  color: #444444 !important;
+  font-size: 20px !important; 
+  line-height: 1.8 !important;
+  margin: 0 auto !important;
+  max-width: 100% !important; 
+}
+
+/* =====================================================
+   RESPONSIVE
+   ===================================================== */
+@media (max-width: 960px) {
+  #seccion-cabecera { padding: 32px 5%; }
+  #seccion-cabecera h1 { font-size: 28px !important; }
+  #seccion-cuerpo { padding: 36px 5%; }
+  #seccion-cuerpo .textoComillas { padding: 28px 28px 28px 56px; }
+}
+
+@media (max-width: 600px) {
+  #seccion-cabecera h1 { font-size: 22px !important; }
+  #seccion-cuerpo .textoComillas {
+    padding: 24px 20px 24px 20px;
+    border-left: 4px solid #E65B0B;
+  }
+  #seccion-cuerpo .textoComillas::before {
+    display: none;
+  }
+  #seccion-cuerpo .textoComillas p { font-size: 14px; }
+}

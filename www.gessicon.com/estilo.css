@@ -1,0 +1,2308 @@
+
+:root {
+  --e-bg:          #f5f7ff;
+  --e-surface:     #ffffff;
+  --e-surface2:    #eef1fa;
+  --e-border:      #dde2f0;
+  --e-accent:      #e65b0b;
+  --e-accent-dark: #c04a00;
+  --e-accent-glow: rgba(230, 91, 11, 0.25);
+  --e-text:        #1a1f36;
+  --e-text-muted:  #aca4a4;
+  --e-text-light:  #9aa0b4;
+  --e-radius:      10px;
+  --e-radius-sm:   6px;
+  --e-shadow:      0 4px 20px rgba(0, 0, 0, 0.08);
+  --e-shadow-lg:   0 8px 40px rgba(0, 0, 0, 0.13);
+}
+
+/* =====================================================
+   PROPIEDADES DESTACADAS
+   ===================================================== */
+#modulo-destacados-1-2 {
+  background: var(--e-surface);
+  padding: 32px 0;
+}
+
+#titulo-destacados-1 {
+  color: var(--e-text) !important;
+  font-size: 24px !important;
+  font-weight: 700 !important;
+  text-align: center !important;
+  margin-bottom: 24px !important;
+  position: relative;
+}
+
+#titulo-destacados-1::after {
+  content: '';
+  display: block;
+  width: 50px;
+  height: 3px;
+  background: var(--e-accent);
+  border-radius: 2px;
+  margin: 8px auto 0;
+}
+
+.destacados-carrusel .propiedad {
+  background: var(--e-surface);
+  border: 1px solid var(--e-border);
+  border-radius: var(--e-radius);
+  overflow: hidden;
+  box-shadow: var(--e-shadow);
+  transition: box-shadow 0.25s, transform 0.25s;
+}
+
+.destacados-carrusel .propiedad:hover {
+  box-shadow: var(--e-shadow-lg);
+  transform: translateY(-3px);
+}
+
+.destacados-ficha-bloque1 {
+  position: relative;
+}
+
+.destacados-ficha-bloque1 .precio1 {
+  position: absolute;
+  bottom: 12px;
+  right: 12px;
+  background: linear-gradient(135deg, var(--e-accent), var(--e-accent-dark));
+  color: #fff !important;
+  padding: 5px 14px;
+  border-radius: 20px;
+  font-weight: 700;
+  font-size: 15px;
+  box-shadow: 0 2px 8px var(--e-accent-glow);
+  z-index: 5;
+}
+
+.destacados-ficha-bloque2 {
+  padding: 14px 16px !important;
+  background: var(--e-surface);
+}
+
+.destacados-titulo {
+  color: var(--e-text) !important;
+  font-size: 13px !important;
+  font-weight: 600 !important;
+  line-height: 1.4 !important;
+  margin-top: 8px !important;
+}
+
+.destacados-masdatos ul {
+  list-style: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  display: flex !important;
+  flex-wrap: wrap !important;
+  gap: 8px !important;
+}
+
+.destacados-masdatos .bloque-icono-name-valor1 {
+  background: var(--e-surface2);
+  border: 1px solid var(--e-border);
+  border-radius: var(--e-radius-sm);
+  padding: 4px 10px;
+  font-size: 12px;
+  color: var(--e-text-muted) !important;
+  gap: 6px;
+}
+
+.destacados-masdatos .bloque-icono-name-valor1 span {
+  color: var(--e-text) !important;
+}
+
+/* Flechas carrusel destacados */
+#destacados-prev,
+#destacados-next {
+  background: var(--e-surface) !important;
+  border: 1.5px solid var(--e-accent) !important;
+  border-radius: 50% !important;
+  width: 36px !important;
+  height: 36px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  transition: background 0.2s !important;
+}
+
+#destacados-prev:hover,
+#destacados-next:hover {
+  background: var(--e-accent) !important;
+}
+
+
+/* =====================================================
+   LISTADO / PAGINACIÓN DE PROPIEDADES
+   ===================================================== */
+#modulo-paginacion {
+  background: var(--e-bg);
+  padding: 0 0 32px 0;
+}
+
+#paginacion-cabecera {
+  background: var(--e-surface);
+  border-bottom: 1px solid var(--e-border);
+  padding: 16px 24px;
+  margin-bottom: 20px;
+}
+
+#paginacion-titulo h1 {
+  color: var(--e-text) !important;
+  font-size: 22px !important;
+  font-weight: 700 !important;
+}
+
+#paginacion-titulo span,
+#paginacion-titulo-sections span {
+  color: var(--e-text-muted) !important;
+  font-size: 13px !important;
+}
+
+#paginacion-titulo-sections menu li a {
+  color: var(--e-accent) !important;
+  font-size: 13px !important;
+  border: 1px solid var(--e-accent) !important;
+  padding: 4px 12px !important;
+  border-radius: 20px !important;
+  transition: background 0.2s !important;
+}
+
+#paginacion-titulo-sections menu li a:hover {
+  background: var(--e-accent) !important;
+  color: #fff !important;
+}
+
+/* Filtros */
+#paginacion-botonesFiltros {
+  background: var(--e-surface);
+  border: 1px solid var(--e-border);
+  border-radius: var(--e-radius);
+  padding: 10px 16px;
+  margin: 0 24px 20px;
+  gap: 12px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+#titulo-filtrar-1 {
+  color: var(--e-text-muted) !important;
+  font-size: 12px !important;
+  font-weight: 600 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.05em !important;
+}
+
+#paginacion-botonesFiltros .vistas,
+#paginacion-botonesFiltros .descartadas,
+#paginacion-botonesFiltros .favoritas {
+  color: var(--e-text-muted) !important;
+  font-size: 13px !important;
+  border: 1px solid var(--e-border) !important;
+  border-radius: 20px !important;
+  padding: 5px 14px !important;
+  transition: border-color 0.2s, color 0.2s, background 0.2s !important;
+}
+
+#paginacion-botonesFiltros .vistas:hover,
+#paginacion-botonesFiltros .descartadas:hover,
+#paginacion-botonesFiltros .favoritas:hover {
+  border-color: var(--e-accent) !important;
+  color: var(--e-accent) !important;
+  background: rgba(230, 91, 11, 0.05) !important;
+}
+
+
+/* Tarjetas de propiedades */
+#paginacion-contenido {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 0 24px;
+  /* Asegúrate de que esto sea visible */
+  overflow: visible !important;
+  height: auto !important; /* Que crezca lo que necesite */
+}
+
+.paginacion-ficha {
+  background: var(--e-surface) !important;
+  border: 1px solid var(--e-border) !important;
+  border-radius: var(--e-radius) !important;
+  overflow: visible !important;
+  box-shadow: var(--e-shadow) !important;
+  transition: box-shadow 0.25s, transform 0.25s !important;
+  flex: 1 1 calc(33% - 20px);
+  min-width: 280px;
+  position: relative;
+  
+}
+
+.paginacion-ficha:hover {
+  box-shadow: var(--e-shadow-lg) !important;
+  transform: translateY(-3px) !important;
+  height: auto !important; /* Permite que la tarjeta estire si la info empuja hacia abajo */
+    z-index: 100 !important;
+}
+
+.paginacion-ficha-tituloprecio {
+  background: linear-gradient(135deg, var(--e-accent), var(--e-accent-dark)) !important;
+  color: #fff !important;
+  font-weight: 700 !important;
+  font-size: 14px !important;
+  padding: 6px 14px !important;
+  border-radius: 0 0 var(--e-radius-sm) 0 !important;
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  z-index: 5 !important;
+}
+
+.paginacion-ficha-bloque2 {
+  padding: 14px 16px !important;
+}
+
+
+.paginacion-ficha-datos .titulo {
+  color: var(--e-text) !important;
+  font-size: 13px !important;
+  font-weight: 600 !important;
+  line-height: 1.4 !important;
+}
+
+.paginacion-ficha-datos hr {
+  border: none !important;
+  border-top: 1px solid var(--e-border) !important;
+  margin: 10px 0 !important;
+}
+
+.paginacion-ficha-masinfo {
+  display: inline-block !important;
+  background: var(--e-accent) !important;
+  color: #fff !important;
+  padding: 5px 16px !important;
+  border-radius: 20px !important;
+  font-size: 12px !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.05em !important;
+  transition: opacity 0.2s !important;
+  text-decoration: none !important;
+}
+
+.paginacion-ficha-masinfo:hover {
+  opacity: 0.85 !important;
+  color: #fff !important;
+}
+
+/* Precio rebajado */
+.paginacion-ficha-preciorebajado {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 6px !important;
+  margin-top: 4px !important;
+}
+
+.paginacion-ficha-precioanterior {
+  color: var(--e-text-muted) !important;
+  font-size: 12px !important;
+  text-decoration: line-through !important;
+}
+
+.paginacion-ficha-precioporcentaje {
+  background: #e8f5e9 !important;
+  color: #2e7d32 !important;
+  font-size: 11px !important;
+  font-weight: 700 !important;
+  padding: 2px 7px !important;
+  border-radius: 10px !important;
+}
+
+
+
+.modulo-valoramostupiso input[type="text"],
+.modulo-valoramostupiso input[type="number"],
+.modulo-valoramostupiso select {
+  border: 1px solid var(--e-border) !important;
+  border-radius: var(--e-radius-sm) !important;
+  padding: 7px 12px !important;
+  color: var(--e-text) !important;
+  background: var(--e-surface) !important;
+  font-size: 13px !important;
+}
+
+.modulo-valoramostupiso input:focus,
+.modulo-valoramostupiso select:focus {
+  border-color: var(--e-accent) !important;
+  outline: none !important;
+  box-shadow: 0 0 0 3px var(--e-accent-glow) !important;
+}
+
+.botonValorar,
+#enviarValoracion {
+  background: linear-gradient(135deg, var(--e-accent), var(--e-accent-dark)) !important;
+  color: #fff !important;
+  border: none !important;
+  border-radius: var(--e-radius-sm) !important;
+  padding: 9px 24px !important;
+  font-weight: 700 !important;
+  font-size: 14px !important;
+  cursor: pointer !important;
+  box-shadow: 0 2px 10px var(--e-accent-glow) !important;
+  transition: opacity 0.2s !important;
+}
+
+
+
+
+
+
+
+/* Estilo del Botón Cargar Más */
+#btn-cargar-mas {
+    /* Colores y Degradado */
+    background: linear-gradient(135deg, #f0610e 0%, #d65b14 50%, #d44d00 100%);
+    color: #ffffff !important;
+    
+    /* Tamaño y Forma */
+    padding: 18px 45px;          /* Más grande */
+    font-size: 18px;             /* Texto más legible */
+    font-weight: 800;
+    border: none;
+    border-radius: 50px;         /* Bordes muy redondeados */
+    
+    /* Tipografía y efectos */
+    font-family: 'Comfortaa', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    
+    /* Sombra suave naranja (usando tu estética de glow) */
+    box-shadow: 0 4px 15px rgba(240, 97, 14, 0.4);
+    
+    /* Transición para animaciones */
+    transition: all 0.3s ease;
+    outline: none;
+}
+
+/* Efecto al pasar el ratón (Hover) */
+#btn-cargar-mas:hover {
+    transform: translateY(-3px); /* Se eleva un poco */
+    box-shadow: 0 6px 20px rgba(240, 97, 14, 0.6);
+    background: linear-gradient(135deg, #ff8c4b 0%, #f0610e 50%, #ff8c4b 100%);
+    filter: brightness(1.1);
+}
+
+/* Efecto al hacer clic */
+#btn-cargar-mas:active {
+    transform: translateY(1px); /* Se hunde un poco al pulsar */
+}
+
+
+/*--------------------------------------------*/
+
+
+/* Forzamos el cambio en las flechas anulando cualquier contenido previo */
+.flechaprev, .flechanext {
+    display: inline-flex !important; /* Asegura que se vea */
+    align-items: center;
+    justify-content: center;
+    width: 55px !important;
+    height: 55px !important;
+    background: linear-gradient(135deg, #f0610e 0%, #d35811 100%) !important;
+    border-radius: 50% !important;
+    text-decoration: none !important;
+    box-shadow: 0 4px 12px rgba(240, 97, 14, 0.4) !important;
+    transition: all 0.3s ease !important;
+    cursor: pointer !important;
+    border: none !important;
+}
+
+/* Ocultamos cualquier SVG que haya dentro de las flechas */
+.flechaprev svg, .flechanext svg, 
+.flechaprev img, .flechanext img {
+    display: none !important;
+}
+
+/* Dibujamos la flecha blanca nueva */
+.flechaprev::before, .flechanext::before {
+    content: '' !important;
+    display: block;
+    width: 14px;
+    height: 14px;
+    border-left: 4px solid white !important;
+    border-bottom: 4px solid white !important;
+}
+
+/* Orientación Izquierda */
+.flechaprev::before {
+    transform: rotate(45deg);
+    margin-left: 5px;
+}
+
+/* Orientación Derecha */
+.flechanext::before {
+    transform: rotate(-135deg);
+    margin-right: 5px;
+}
+
+/* Efecto Hover */
+.flechaprev:hover, .flechanext:hover {
+    filter: brightness(1.2) !important;
+}
+
+/*----------------------------------------------------------------------------------*/
+
+/* Usamos el ID para tener máxima prioridad */
+a#btn-volver-home {
+    /* Forzamos que se comporte como bloque para que acepte el padding */
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    
+    /* Colores y Degradado */
+    background: linear-gradient(135deg, #f0610e 0%, #d65b14 50%, #d44d00 100%) !important;
+    color: #ffffff !important;
+    text-decoration: none !important;
+    
+    /* Tamaño y Forma */
+    padding: 15px 35px !important;
+    font-size: 16px !important;
+    font-weight: 800 !important;
+    border-radius: 50px !important;
+    
+    /* Tipografía */
+    font-family: 'Comfortaa', sans-serif !important;
+    text-transform: uppercase !important;
+    
+    /* Sombra y Animación */
+    box-shadow: 0 4px 15px rgba(240, 97, 14, 0.4) !important;
+    transition: all 0.3s ease !important;
+    cursor: pointer !important;
+    
+    /* Margen para que no esté pegado a nada */
+    margin: 20px 0 !important;
+}
+
+#btn-volver-home:hover {
+    transform: translateX(-5px) !important;
+    box-shadow: 0 6px 20px rgba(240, 97, 14, 0.6) !important;
+    filter: brightness(1.1) !important;
+}
+/* =====================================================*/
+/* =====================================================*/
+
+.titulo-propiedades {
+    /* Tipografía y Textura */
+    font-family: 'Comfortaa', sans-serif;
+    font-size: 36px;             /* Tamaño ideal para un título principal */
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 2px;         /* Un poco más espaciado para que se vea elegante */
+    text-align: center;          /* Centrado en la página */
+    margin: 30px 0;              /* Espaciado superior e inferior */
+
+    /* Degradado en el Texto */
+    background: linear-gradient(135deg, #f0610e 0%, #d65b14 50%, #d44d00 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+
+    /* Efecto Glow (Sombra suave de texto naranja) */
+    text-shadow: 0 4px 12px rgba(240, 97, 14, 0.25);
+    
+    /* Transición suave por si quieres añadirle efectos luego */
+    transition: all 0.3s ease;
+}
+
+/* =====================================================*/
+/* =====================================================*/
+
+/* Efecto sutil al pasar el ratón por encima del título */
+.titulo-propiedades:hover {
+    transform: translateY(-2px);
+    text-shadow: 0 6px 18px rgba(240, 97, 14, 0.4);
+    background: linear-gradient(135deg, #ff8c4b 0%, #f0610e 50%, #ff8c4b 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+
+/* =====================================================
+   MÓDULO ACCESO BASE DE DATOS HISTÓRICA (NUEVO - AJUSTADO)
+   ===================================================== */
+#modulo-archivo-historico {
+  background: var(--e-bg);
+  padding: 64px 24px; /* Aumentada la altura general del módulo */
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+}
+
+.contenedor-historico {
+  background: var(--e-surface);
+  border: 1px solid var(--e-border);
+  border-radius: var(--e-radius);
+  box-shadow: var(--e-shadow);
+  max-width: 850px;
+  width: 100%;
+  padding: 48px 32px; /* Más espacio interno arriba y abajo */
+  text-align: center;
+  box-sizing: border-box;
+  transition: box-shadow 0.25s, transform 0.25s;
+}
+
+/* Al pasar el ratón, la sección se eleva igual que tus tarjetas */
+.contenedor-historico:hover {
+  box-shadow: var(--e-shadow-lg);
+  transform: translateY(-3px);
+}
+
+.titulo-historico {
+  font-family: 'Comfortaa', sans-serif;
+  font-size: 26px; /* Un punto más grande para que destaque */
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 18px;
+  
+  /* SOLUCIÓN AL CORTE: Espacio extra para que el degradado respire */
+  line-height: 1.4 !important; 
+  padding-top: 8px !important;
+  display: block;
+  
+  /* Degradado naranja corporativo calcado de tu web */
+  background: linear-gradient(135deg, #f0610e 0%, #d65b14 50%, #d44d00 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-shadow: 0 4px 12px rgba(240, 97, 14, 0.15);
+}
+
+.texto-historico {
+  color: var(--e-text);
+  font-size: 14px;
+  line-height: 1.6;
+  max-width: 600px;
+  margin: 0 auto 28px auto;
+}
+
+/* Botón estilizado basado en tu botón "Cargar Más" */
+.btn-historico {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  
+  background: linear-gradient(135deg, #f0610e 0%, #d65b14 50%, #d44d00 100%);
+  color: #ffffff !important;
+  text-decoration: none !important;
+  
+  padding: 14px 40px;
+  font-size: 15px;
+  font-weight: 800;
+  border-radius: 50px; /* Bordes redondeados tipo cápsula */
+  
+  font-family: 'Comfortaa', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  
+  box-shadow: 0 4px 15px rgba(240, 97, 14, 0.3);
+  transition: all 0.3s ease;
+}
+
+.btn-historico:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(240, 97, 14, 0.5);
+  background: linear-gradient(135deg, #ff8c4b 0%, #f0610e 50%, #ff8c4b 100%);
+  filter: brightness(1.1);
+}
+
+.btn-historico:active {
+  transform: translateY(1px);
+}
+
+/*------------------------------*/
+/*-------------------------------*/
+#supercontenedor {
+    background-color: #FFF;
+    margin: 0 auto;
+}
+
+.grecaptcha-badge {
+    z-index: -1 !important; /* Ocultamos el iframe de google del recaptcha v3 */
+    display: none;
+}
+
+.w100 {
+    width: 100%;
+}
+
+.flex {
+    display: flex;
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-justify-end {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.flex-justify-between {
+    display: flex;
+    justify-content: space-between;
+}
+
+.flex-align-center {
+    display: flex;
+    align-items: center;
+}
+
+.flex-align-end {
+    display: flex;
+    align-items: flex-end;
+}
+
+.flex-align-top {
+    display: flex;
+    align-items: flex-start;
+}
+
+.flex-wrap {
+    flex-wrap: wrap;
+}
+
+.gap-5 {
+    gap: 5px;
+}
+
+.gap-10 {
+    gap: 10px;
+}
+
+.gap-20 {
+    gap: 20px;
+}
+
+.imv-mb-20 {
+    margin-bottom: 20px;
+}
+
+sup, sub {
+    font-size: .7em;
+}
+
+section.fixed {
+    background-attachment: fixed !important;
+    -webkit-transform: none !important;
+    transform: none !important;
+}
+
+section.unset {
+    background-attachment: unset !important;
+}
+
+.bloque-modulo {
+    position: relative;
+    overflow: hidden;
+}
+
+.bloque-modulo,
+.bloque-100 {
+    box-sizing: border-box;
+    display: flex;
+    width: 100%;
+}
+
+.sombreado {
+    box-shadow: 0px 0px 4px 1px rgba(248, 248, 248, 0.22);
+    -webkit-box-shadow: 0px 0px 4px 1px rgba(255, 255, 255, 0.22);
+    -moz-box-shadow: 0px 0px 4px 1px rgba(255, 255, 255, 0.22);
+}
+
+.relative {
+    position: relative;
+}
+
+.custom-select,
+.custom-select-html {
+    box-sizing: border-box;
+    display: flex;
+    flex: 1;
+    align-items: center;
+    position: relative;
+    height: 35px;
+    background-color: #fff;
+    color: var(--colorTextos2);
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.custom-select-html > * {
+    display: none;
+}
+
+.custom-select-html {
+    padding-right: 27px;
+}
+
+.custom-select-html:before {
+    content: attr(data-txt);
+    position: static;
+    min-width: 80px;
+    padding: 15px 10px 15px 13px;
+    cursor: pointer;
+    overflow-x: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.custom-select select {
+    box-sizing: border-box;
+    max-width: 100%;
+    width: 100%;
+    height: 100%;
+    padding: 5px 10px;
+    margin: 0;
+    font-size: 14px;
+    color: var(--colorTextos2);
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.custom-select select option {
+    max-width: 100%;
+}
+
+.custom-select-html:after,
+.custom-select:after {
+    box-sizing: border-box;
+    content: "â–¼";
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    padding: 0 7px;
+    font-size: 60%;
+    line-height: 30px;
+    background: #fff;
+    color: rgba(60, 63, 65, 0.98);
+    pointer-events: none;
+    border-right: 1px solid #ddd;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+}
+
+.custom-checkbox {
+    position: absolute;
+    opacity: 0;
+}
+
+.custom-checkbox + label {
+    position: relative;
+    cursor: pointer;
+    padding: 0 !important;
+}
+
+.custom-checkbox + label:before {
+    content: '';
+    margin-right: 10px;
+    display: inline-block;
+    vertical-align: text-top;
+    width: 20px;
+    height: 20px;
+    background: #d4d4d4;
+}
+
+.custom-checkbox:hover + label:before {
+    background: #d4d4d4;
+}
+
+.custom-checkbox:focus + label:before {
+    box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.12);
+}
+
+.custom-checkbox:checked + label:before {
+    background: #d4d4d4;
+}
+
+.custom-checkbox:disabled + label {
+    color: #b8b8b8;
+    cursor: auto;
+}
+
+.custom-checkbox:disabled + label:before {
+    box-shadow: none;
+    background: #ddd;
+}
+
+.custom-checkbox:checked + label:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    background-image: url('../img/check.png');
+    width: 18px;
+    height: 18px;
+    transform: translateY(-50%);
+    background-size: contain;
+}
+
+/*******            info propiedades             ************/
+i {
+    width: 24px;
+    height: 24px;
+    display: block;
+    float: left;
+    margin-right: 10px
+}
+
+p {
+    i {
+        width: auto;
+    }
+}
+
+.id {
+    background: url(../img/realicons.png) no-repeat;
+}
+
+.habitacion {
+    background: url(../img/realicons.png) no-repeat -32px 0px;
+}
+
+.parking {
+    background: url(../img/realicons.png) no-repeat 0px 0px;
+}
+
+.bano {
+    background: url(../img/realicons.png) no-repeat 0px -24px;
+}
+
+.superficieico {
+    background: url(../img/realicons.png) no-repeat -29px -89px;
+
+}
+
+.fa {
+    margin-left: 7px;
+    margin-right: 2px;
+}
+
+/*******          fin  info propiedades             ************/
+
+.bloque-icono-name-valor1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.bloque-icono-name-valor1 > div {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
+.bloque-shadow {
+    width: 100%;
+    height: 24px;
+    background: url(../img/slider/sombra.png) bottom no-repeat;
+}
+
+.flechaprev,
+.flechanext {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    z-index: 7;
+}
+
+.flechaprev {
+    left: 5px;
+    background: url(../js/lib/revolution/assets/large_left.png) no-Repeat top left;
+}
+
+.flechanext {
+    right: 5px;
+    background: url(../js/lib/revolution/assets/large_right.png) no-Repeat top left;
+}
+
+.flecha2-previous,
+.flecha2-next {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+}
+
+.flecha2-previous {
+    background: url("../js/lib/revolution/assets/large_left2.png") no-repeat scroll left bottom rgba(0, 0, 0, 0);
+}
+
+.flecha2-next {
+    background: url("../js/lib/revolution/assets/large_right2.png") no-repeat scroll left bottom rgba(0, 0, 0, 0);
+}
+
+.imagenesComoBackground {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.imagenesComoBackground[style*="img/nofotos.png"] {
+    background-size: contain;
+}
+
+body {
+    font-size: 14px;
+    color: var(--colorTextos);
+    overflow-x: hidden;
+}
+
+.textolegal {
+    font-size: 12px;
+    text-align: justify;
+}
+
+.fotopropiedad.nofoto .flechaprev,
+.fotopropiedad.nofoto .flechanext {
+    display: none;
+}
+
+.visorficha {
+    box-sizing: border-box;
+    width: 70%;
+    margin: 0 15%;
+    padding: 1% 1% 0 1%;
+}
+
+.visorficha .visorficha-principal {
+    position: relative;
+    width: 100%;
+    height: 0;
+    overflow: hidden;
+    padding-top: 50%;
+    background-size: contain;
+}
+
+.visorficha .visorficha-principal .flechaprev {
+    background-image: url(../js/lib/revolution/assets/large_left2.png);
+    left: 3%;
+}
+
+.visorficha .visorficha-principal .flechanext {
+    background-image: url(../js/lib/revolution/assets/large_right2.png);
+    right: 3%;
+}
+
+.visorficha .visorficha-miniaturas ul {
+    position: relative;
+    left: 0;
+    display: flex;
+    width: 75%;
+    max-width: 100%;
+    justify-content: flex-start;
+    align-items: flex-start;
+    overflow-x: auto;
+    border: 1px solid var(--background1-78);
+    border-left: none;
+    border-right: none;
+    padding: 6px 0;
+    margin: auto;
+    margin-top: 15px;
+}
+
+.visorficha .visorficha-miniaturas li {
+    position: relative;
+    height: 4vw;
+    width: 11%;
+    min-width: 11%;
+    margin: 1vh 4vh 1vh 0;
+    cursor: pointer;
+}
+
+.visorficha .visorficha-miniaturas li:last-child {
+    margin-right: 0;
+}
+
+.visorficha .visorficha-fullscreen {
+    position: absolute;
+    z-index: 4;
+    bottom: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    background: url(../img/fullscreen.png) no-repeat scroll left bottom rgba(0, 0, 0, 0);
+    background-size: cover;
+    cursor: pointer;
+}
+
+.visorficha .visorficha-fullscreen.fullscreened {
+    background-image: url(../img/fullscreen_invertido.png);
+    right: 40px;
+    bottom: 76px;
+}
+
+.visorficha .visorficha-principal.fullscreened {
+    position: fixed;
+    top: 0;
+    left: 0;
+    transform: initial;
+    width: 100vw;
+    height: 100vh;
+    z-index: 60;
+    background-size: contain;
+    background-color: #000;
+    padding: 0;
+}
+
+.visorficha .fotopropiedad::after {
+    left: 50%;
+    transform: translateX(-50%);
+    background-position: bottom center;
+}
+
+.cajaNegraAlerta .modalNuestra {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 400px;
+    min-height: 200px;
+    max-width: 90vw;
+    max-height: 90vh;
+    padding: 15px 20px;
+    color: #333;
+    background-color: #fff;
+    border-radius: 8px;
+}
+
+.cajaNegraAlerta .cajaCabeceraModalNuestra {
+    box-sizing: border-box;
+    min-height: 30px;
+    padding-bottom: .5em;
+    margin-bottom: .5em;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    justify-content: space-between;
+    font-size: 20px;
+}
+
+.cajaNegraAlerta .cajaCabeceraModalNuestra span {
+    font-size: 1.1em;
+    font-weight: bold;
+}
+
+.cajaNegraAlerta .cajaCabeceraModalNuestra span:hover {
+    cursor: pointer;
+}
+
+.cajaNegraAlerta .modalNuestraCont {
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+}
+
+.cajaNegraAlerta[capa="mytextolegal"] .modalNuestraCont,
+.cajaNegraAlerta[capa="mytextoprivacidadFooter"] .modalNuestraCont {
+    display: block;
+}
+
+.modalContenidoCookies {
+    width: 850px;
+    height: 650px;
+    overflow: auto;
+
+}
+
+.modalesOcultas {
+    display: none;
+}
+
+.irAfichaPropiedad {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 4;
+}
+
+.paginador {
+    display: flex;
+    justify-content: center;
+}
+
+.paginador a {
+    display: flex;
+    align-items: center;
+    margin: 0 3px;
+    padding: 7px 15px;
+    border: 1px solid var(--color3);
+    font-weight: bold;
+    background-color: var(--background1-78);
+    color: var(--color1);
+}
+
+.paginador a svg,
+.paginador a svg rect,
+.paginador a svg path {
+    fill: var(--color1);
+}
+
+.paginador a.activa,
+.paginador a:hover {
+    background-color: var(--background1);
+    color: var(--color1);
+}
+
+.paginador > * {
+    display: flex;
+    margin-bottom: 0;
+}
+
+.paginador .paginador-controlesOpciones {
+    /* display: flex; */
+    /* align-items: center; */
+    margin-left: 5px;
+}
+
+.paginador .paginador-controlesOpciones .custom-select {
+    background-color: #d4d4d4;
+}
+
+.paginador .paginador-controlesOpciones select {
+    background-color: #d4d4d4;
+}
+
+.paginador .paginador-irApagina {
+    width: 60px;
+    margin-left: 5px;
+    background-color: #d4d4d4;
+    font-size: 14px;
+    font-weight: bolder;
+}
+
+.selectCiudad-prov {
+    font-weight: bold;
+}
+
+.customMultipleOptions,
+.customSelectMultiple {
+    max-height: 180px;
+    height: 180px;
+    overflow-y: auto;
+    background-color: #ebebeb;
+    font-size: 14px;
+}
+
+.cajaGrupoTiposZonas ul {
+    display: none;
+    box-sizing: border-box;
+    padding-left: 10px;
+}
+
+.cajaGrupoTiposZonas .grupoTipoZona > input[type=checkbox],
+.cajaGrupoTiposZonas .grupoTipoZona > span {
+    cursor: pointer;
+}
+
+.textoComillas {
+    position: relative;
+    box-sizing: border-box;
+    padding-left: 60px;
+}
+
+.textoComillas::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: 'â€œ';
+    font: 100px Georgia, sans-serif;
+    color: #761b11;
+    line-height: 1em;
+}
+
+#fb-root .fb_dialog {
+    z-index: 51 !important;
+}
+
+.fotopropiedad::after,
+.visorficha .visorficha-miniaturas li::after {
+    position: absolute;
+    z-index: 2;
+    bottom: 5px;
+    left: 5px;
+    width: 100%;
+    height: 100%;
+    max-width: 25%;
+    max-height: 25%;
+    content: '';
+    background-image: url('../img/header/logo.png');
+    background-size: contain;
+    background-position: bottom left;
+    background-repeat: no-repeat;
+}
+
+.modalAlVuelo {
+    box-sizing: border-box;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: #00000066;
+}
+
+.contenido-modalAlVuelo {
+    box-sizing: border-box;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 500px;
+    max-width: 75vw;
+    min-height: 400px;
+    padding: 50px;
+    border-radius: 20px;
+    background-color: #fff;
+}
+
+#modalAlVuelo .boton-cerrar {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    cursor: pointer;
+    border-radius: 100px;
+    padding: 6px 8px 5px 8px;
+    background-color: #00000066;
+    color: #fff;
+}
+
+.componentes-v3 [type="text"] {
+    border-radius: 0 !important;
+}
+
+.componentes-v3 [type="text"]:hover {
+    border: 1px solid #CCC !important;
+}
+
+.componentes-v3 .buscador-areas__input-valor,
+.componentes-v3 .buscador-areas__input-busqueda,
+.componentes-v3 .buscador-areas {
+    box-sizing: border-box;
+    max-height: 30px;
+}
+
+#buscAvanzado-buscador .componentes-v3 .buscador-areas__input-valor,
+#buscAvanzado-buscador .componentes-v3 .buscador-areas__input-busqueda,
+#buscAvanzado-buscador .componentes-v3 .buscador-areas {
+    max-height: 28px !important ;
+}
+
+.componentes-v3 .buscador-areas__toggle {
+    top: 0;
+}
+
+
+.componentes-v3 .buscador-areas__icono-flecha:before {
+    content: attr(data-txt);
+    position: static;
+    min-width: 80px;
+    padding: 15px 10px 15px 13px;
+    cursor: pointer;
+    overflow-x: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+@media (max-width: 1600px) {
+
+    .visorficha {
+        width: 80%;
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+
+    .visorficha .visorficha-miniaturas li {
+        height: 5vw;
+    }
+
+}
+
+@media (max-width: 1400px) {
+    .custom-select-html:before {
+        padding: 15px 10px 18px 13px;
+    }
+
+    .custom-select-html {
+        height: 31px;
+    }
+}
+
+@media (max-width: 1000px) {
+
+    .paginador {
+        flex-wrap: wrap;
+    }
+
+
+}
+
+@media (max-width: 900px) {
+
+    .visorficha {
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .visorficha .visorficha-fullscreen {
+        width: 4vw;
+        height: 4vw;
+    }
+
+    .visorficha .visorficha-miniaturas li {
+        height: 8vw;
+    }
+
+}
+
+@media (max-width: 600px) and (orientation: portrait) {
+
+    .visorficha .visorficha-principal {
+        padding-top: 70%;
+    }
+
+    .visorficha .visorficha-miniaturas li {
+        height: 15vw;
+        min-width: 25%;
+    }
+
+}
+
+.cajaNegraLoading {
+    position: fixed;
+    z-index: 9999999;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.cajaNegraLoading img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.cajaNegraAlerta {
+    position: fixed;
+    z-index: 99999999;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.cajaNegraAlerta .cajaAlertaContenedor {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 333px;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    padding: 20px 30px;
+    align-items: center;
+    border-radius: 8px;
+    background-color: #fff;
+}
+
+.cajaNegraAlerta .cajaAlertaContenedor.cajaAlertaContenedorModal {
+    width: auto;
+    height: auto;
+    max-width: 90%;
+    max-height: 90%;
+}
+
+.cajaNegraAlerta .cajaAlertaContenedor .cajaAlertaTxt {
+    height: calc(100% - 30px);
+    display: flex;
+    align-items: center;
+    color: #333;
+    margin: 10px auto 30px;
+    font-family: Comfortaa;
+    font-weight: bold;
+}
+
+.cajaNegraAlerta .cajaAlertaContenedor .cajaAlertaAceptar {
+    width: auto;
+    border: 0;
+    background-color: var(--background1);
+    padding: 8px 15px;
+    color: var(--color1);
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+.cajaNegraAlerta .cajaAlertaContenedor .cajaAlertaAceptar:hover {
+    opacity: .9;
+}
+
+
+@media (max-width: 650px) {
+    .paginador > * {
+        order: 1;
+        margin-bottom: 15px;
+        width: 32%;
+        justify-content: space-around;
+    }
+
+    .paginador .paginador-controlesOpciones {
+        /* width: 50%; */
+    }
+
+    .paginador .paginador-numpaginas {
+        width: 100%;
+        justify-content: space-around;
+        order: 0;
+    }
+
+
+}
+
+#aviso-cookies {
+    text-align: center;
+    bottom: 0;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 15px;
+    box-sizing: border-box;
+    height: auto;
+    line-height: 1.6;
+}
+
+#aviso-cookies a {
+    border: 1px solid #a1a59f;
+    padding: 6px;
+    border-radius: 4px;
+    background-color: #e9e5e9;
+    color: black;
+    margin-bottom: 5px;
+    display: inline-block;
+    cursor: pointer;
+}
+
+#aviso-cookies ul li {
+    margin-bottom: 5px;
+}
+
+#mas-detalles-cookies {
+    text-align: left;
+    display: none;
+    margin-top: 25px;
+}
+
+
+.modalNuestraCookies {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 400px;
+    min-height: 200px;
+    max-width: calc(100vw - 40px);
+    max-height: calc(100vh - 40px);
+    color: #333;
+    background-color: #fff;
+    border-radius: 15px;
+}
+
+#textocookies.classtextocookies.contCookies{
+    height: 550px;
+    overflow: scroll;
+}
+
+.modalNuestraCookies .botonCerrar {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    border-radius: 20px;
+    background-color: #fff;
+    color: #000;
+    font-size: 12px;
+    padding: 0 5px;
+    cursor: pointer;
+}
+
+
+@media (max-width: 480px) {
+    section.fixed, section.unset {
+        background-attachment: initial !important; /* Quitamos efecto paralax, en mÃ³viles los navegadores no lo soportan */
+    }
+
+    .modalNuestraCookies {
+        min-width: initial;
+        width: 90%;
+        max-height: 90%;
+    }
+}
+
+
+@media (max-width: 450px) {
+    .paginador .paginador-numpaginas {
+        /*flex-wrap: wrap;
+        justify-content: center;
+        margin-bottom: 0;*/
+    }
+
+    .paginador .paginador-numpaginas li {
+        /*margin-bottom: 15px;*/
+    }
+
+    .paginador > * {
+        /*width: 49%;*/
+    }
+
+    .paginador .paginador-controlesOpciones {
+        /*width: 100%;*/
+    }
+
+}
+
+@media (max-width: 400px) {
+
+    .cajaNegraAlerta .cajaAlertaContenedor {
+        width: 90%;
+        border-radius: 0;
+    }
+
+    .cajaNegraAlerta .cajaAlertaContenedor .cajaAlertaTxt {
+        width: 90%;
+    }
+
+    .cajaNegraAlerta .modalNuestra {
+        box-sizing: border-box;
+        min-width: initial;
+        min-height: initial;
+        max-width: initial;
+        max-height: initial;
+        width: 100vw;
+        height: 100vh;
+        border-radius: initial;
+    }
+
+    .cajaNegraAlerta .modalNuestraCookies {
+        box-sizing: border-box;
+
+
+    }
+
+
+}
+
+
+
+#botongestionar_aviso_entrada,
+#botonaceptar_aviso_entrada,
+#botonaceptar_aviso_entrada,
+#botonaceptar_aviso_textocompleto,
+#botonrechazar_aviso_entrada{
+    border: 1px solid var(--colorTextos2);
+    border-radius: 5px;
+    padding: 7px;
+    margin: 5px;
+    font-size: 15px;
+    font-weight: bold;
+    color: var(--colorTextos2);
+    background-color: var(--colorTextos);
+}
+
+#titulo_politica_cookies {
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    font-size: 20px !important;
+    font-weight: bold;
+    background-color: var(--background1);
+    color: var(--color1);
+    padding: 15px 20px;
+    border-bottom: 1px solid #ddd;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+
+#textocookies::-webkit-scrollbar {
+    width: 15px;
+    background-color: #F7F7F7;
+}
+
+#textocookies::-webkit-scrollbar-track {
+    border-radius: 10px;
+    background-color: #F7F7F7;
+}
+
+#textocookies::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: #CDCDCD;
+}
+
+
+section#modulo-equipo .caroufredsel_wrapper {
+    min-width: 100%;
+    max-width: 100%;
+}
+
+.contCookies {
+    padding: 15px 20px;
+}
+
+#titulo_politica_cookies img {
+    height: 60px;
+}
+
+#texto_breve_politica_cookies {
+
+}
+
+#caja_botones_cookies {
+    text-align: right;
+}
+
+#caja_texto_cookies_textocompleto {
+    display: flex;
+    flex-direction: column;
+}
+
+#textocookies {
+    max-width: 100%;
+    overflow: auto;
+}
+
+#textocookies h3 {
+    color: var(--background1);
+    font-weight: bolder;
+}
+
+#textocookies h4 {
+    color: var(--background1);
+    font-weight: bolder;
+}
+
+#textocookies table {
+    font-size: 13px;
+}
+
+#textocookies table td {
+    border-bottom: 1px solid #E3E3E3;
+    padding: 10px;
+}
+
+#textocookies table tr {
+    border-: 1px solid #E3E3E3;
+}
+
+
+.grid-container {
+    display: flex !important;
+    flex-direction: column;
+}
+
+.ocultar_depurar {
+    display: none;
+}
+/*Evita que el iframe de facebook realice scroll al bottom (Solo pasa con Chrome)*/
+.fb_dialog, .fb_reset {
+    position: fixed !important;
+    z-index: 10000 !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ==========================================================================
+   SOLUCIÓN DEFINITIVA: REPARACIÓN DE BOTONES Y SECCIÓN INFERIOR DUAL
+   ========================================================================== */
+
+/* 1. BOTÓN "CARGAR MÁS" (Bordes redondeados, centrado y con diseño Cápsula) */
+#btn-cargar-mas, 
+.btn-cargar-mas,
+[id*="cargar-mas"],
+.paginacion-vermas a,
+#modulo-paginacion button {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  background: linear-gradient(135deg, #f0610e 0%, #d65b14 50%, #d44d00 100%) !important;
+  color: #ffffff !important;
+  padding: 16px 45px !important;
+  font-size: 16px !important;
+  font-weight: 800 !important;
+  border: none !important;
+  border-radius: 50px !important;
+  font-family: 'Comfortaa', sans-serif !important;
+  text-transform: uppercase !important;
+  letter-spacing: 1px !important;
+  cursor: pointer !important;
+  box-shadow: 0 4px 15px rgba(240, 97, 14, 0.4) !important;
+  transition: all 0.3s ease !important;
+  margin: 40px auto !important; /* Lo centra automáticamente en su contenedor */
+  width: max-content !important;
+  clear: both !important;
+}
+
+#btn-cargar-mas:hover, 
+.btn-cargar-mas:hover {
+  transform: translateY(-3px) !important;
+  box-shadow: 0 6px 20px rgba(240, 97, 14, 0.6) !important;
+  filter: brightness(1.1) !important;
+}
+
+/* 2. REPARACIÓN REJILLA DUAL (Suscripción y Valoración alineados y simétricos) */
+.fila-dos-columnas,
+.seccion-dual-personalizada {
+  display: flex !important;
+  flex-direction: row !important;
+  flex-wrap: nowrap !important;
+  justify-content: space-between !important;
+  align-items: stretch !important;
+  width: 100% !important;
+  max-width: 1200px !important;
+  margin: 40px auto !important;
+  padding: 0 24px !important;
+  box-sizing: border-box !important;
+  background: #ffffff !important;
+}
+
+#modulo-suscribete-1,
+#modulo-valoramostupiso-1 {
+  flex: 1 !important;
+  width: 50% !important;
+  max-width: 50% !important;
+  min-width: 0 !important;
+  background: #ffffff !important;
+  padding: 15px !important;
+  box-sizing: border-box !important;
+  display: block !important;
+}
+
+/* Tarjetas internas con idéntica proporción */
+.modulos-suscribete,
+.contenedor-valoracion {
+  background: var(--e-surface) !important;
+  border: 1px solid var(--e-border) !important;
+  border-radius: var(--e-radius) !important;
+  box-shadow: var(--e-shadow) !important;
+  width: 100% !important;
+  height: 100% !important;
+  padding: 44px 32px !important;
+  box-sizing: border-box !important;
+  text-align: center !important;
+  transition: box-shadow 0.25s, transform 0.25s !important;
+}
+
+.modulos-suscribete:hover,
+.contenedor-valoracion:hover {
+  box-shadow: var(--e-shadow-lg) !important;
+  transform: translateY(-3px) !important;
+}
+
+/* 3. ARREGLO DE TÍTULOS EN NARANJA CORPORATIVO (Sin cortes, rectos y centrados) */
+#titulo-suscribete-1,
+#titulo-valoramostupido-1,
+.modulos-suscribete .titulo,
+.fila-dos-columnas h1 {
+  font-family: 'Comfortaa', sans-serif !important;
+  font-size: 24px !important;
+  font-weight: 800 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 1px !important;
+  margin-bottom: 20px !important;
+  line-height: 1.4 !important;
+  display: block !important;
+  font-style: normal !important;
+  text-align: center !important;
+  
+  background: linear-gradient(135deg, #f0610e 0%, #d65b14 50%, #d44d00 100%) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  background-clip: text !important;
+  text-shadow: 0 4px 12px rgba(240, 97, 14, 0.15) !important;
+}
+
+/* Forzar que todos los textos secundarios sean rectos (sin cursivas raras) */
+.fila-dos-columnas p,
+.fila-dos-columnas label,
+.fila-dos-columnas div,
+.subtitulo-val,
+.contenedor-valoracion .mensaje {
+  font-style: normal !important;
+  color: var(--e-text) !important;
+}
+
+/* 4. REDISEÑO TOTAL DE BOTONES INTERNOS (Para que no floten ni queden transparentes) */
+.fila-dos-columnas input[type="text"],
+.fila-dos-columnas input[type="number"],
+.fila-dos-columnas select {
+  border: 1px solid var(--e-border) !important;
+  border-radius: 50px !important;
+  padding: 12px 20px !important;
+  font-size: 14px !important;
+  background: var(--e-surface) !important;
+  color: var(--e-text) !important;
+  box-sizing: border-box !important;
+  outline: none !important;
+  width: 100% !important;
+  margin-bottom: 12px !important;
+}
+
+/* Forzado macizo para botones "Enviar" y "Valorar" */
+.fila-dos-columnas .botonEnviar,
+.fila-dos-columnas .botonValorar,
+.fila-dos-columnas .accionEnviar,
+.fila-dos-columnas button[type="submit"] {
+  background: linear-gradient(135deg, #f0610e 0%, #d65b14 50%, #d44d00 100%) !important;
+  color: #ffffff !important;
+  border: none !important;
+  border-radius: 50px !important;
+  padding: 14px 40px !important;
+  font-family: 'Comfortaa', sans-serif !important;
+  font-size: 15px !important;
+  font-weight: 800 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 1px !important;
+  cursor: pointer !important;
+  width: 100% !important;
+  margin-top: 15px !important;
+  box-shadow: 0 4px 15px rgba(240, 97, 14, 0.3) !important;
+  transition: all 0.3s ease !important;
+  display: inline-block !important;
+}
+
+.fila-dos-columnas .botonEnviar:hover,
+.fila-dos-columnas .botonValorar:hover {
+  transform: translateY(-2px) !important;
+  box-shadow: 0 6px 20px rgba(240, 97, 14, 0.5) !important;
+  filter: brightness(1.1) !important;
+}
+
+
+
+
+
+
+
+
+
+
+/* ==========================================================================
+   FORZADO DE VISIBILIDAD: MÓDULO BASE DE DATOS HISTÓRICA
+   ========================================================================== */
+
+/* Forzamos que el contenedor principal y su envoltorio existan y ocupen espacio */
+#modulo-archivo-historico,
+.modulo-archivo-historico,
+section[id*="historico"],
+div[class*="historico"] {
+  display: flex !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  height: auto !important;
+  min-height: 250px !important;
+  position: relative !important;
+  z-index: 99 !important;
+  background: var(--e-bg) !important;
+  padding: 64px 24px !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
+  justify-content: center !important;
+  clear: both !important;
+}
+
+/* Forzamos la tarjeta interior blanca para que pinte su caja con relieve */
+.contenedor-historico,
+#modulo-archivo-historico .contenedor-historico,
+.modulo-archivo-historico > div {
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  background: #ffffff !important; /* Blanco puro */
+  border: 1px solid var(--e-border) !important;
+  border-radius: var(--e-radius) !important;
+  box-shadow: var(--e-shadow) !important;
+  max-width: 850px !important;
+  width: 100% !important;
+  padding: 48px 32px !important;
+  text-align: center !important;
+  box-sizing: border-box !important;
+  margin: 0 auto !important;
+  transition: box-shadow 0.25s, transform 0.25s !important;
+}
+
+/* Hover de la tarjeta */
+.contenedor-historico:hover {
+  box-shadow: var(--e-shadow-lg) !important;
+  transform: translateY(-3px) !important;
+}
+
+/* Forzado del Título en Degradado Naranja */
+.titulo-historico,
+#modulo-archivo-historico h2,
+#modulo-archivo-historico h3 {
+  display: block !important;
+  font-family: 'Comfortaa', sans-serif !important;
+  font-size: 26px !important;
+  font-weight: 800 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 1px !important;
+  margin-bottom: 18px !important;
+  line-height: 1.4 !important;
+  padding-top: 8px !important;
+  font-style: normal !important;
+  text-align: center !important;
+  
+  background: linear-gradient(135deg, #f0610e 0%, #d65b14 50%, #d44d00 100%) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  background-clip: text !important;
+  text-shadow: 0 4px 12px rgba(240, 97, 14, 0.15) !important;
+}
+
+/* Forzado del texto descriptivo */
+.texto-historico,
+#modulo-archivo-historico p {
+  display: block !important;
+  color: var(--e-text) !important;
+  font-size: 14px !important;
+  line-height: 1.6 !important;
+  max-width: 600px !important;
+  margin: 0 auto 28px auto !important;
+  font-style: normal !important;
+  text-align: center !important;
+}
+
+/* Forzado del Botón Cápsula Naranja para acceder */
+.btn-historico,
+#modulo-archivo-historico a {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  background: linear-gradient(135deg, #f0610e 0%, #d65b14 50%, #d44d00 100%) !important;
+  color: #ffffff !important;
+  text-decoration: none !important;
+  padding: 14px 40px !important;
+  font-size: 15px !important;
+  font-weight: 800 !important;
+  border-radius: 50px !important;
+  font-family: 'Comfortaa', sans-serif !important;
+  text-transform: uppercase !important;
+  letter-spacing: 1px !important;
+  cursor: pointer !important;
+  box-shadow: 0 4px 15px rgba(240, 97, 14, 0.3) !important;
+  transition: all 0.3s ease !important;
+}
+
+.btn-historico:hover,
+#modulo-archivo-historico a:hover {
+  transform: translateY(-2px) !important;
+  box-shadow: 0 6px 20px rgba(240, 97, 14, 0.5) !important;
+  filter: brightness(1.1) !important;
+}
+
+
+
+
+
+
+
+
+/* ==========================================================================
+   SOLUCIÓN DEFINITIVA: LIMPIEZA DE CAPAS GRISES, ANCHOS Y CENTRADO
+   ========================================================================== */
+
+/* 1. CONTENEDORES PRINCIPALES (Simetría absoluta) */
+.seccion-dual-personalizada {
+  display: flex !important;
+  flex-direction: row !important;
+  flex-wrap: wrap !important;
+  justify-content: center !important;
+  align-items: stretch !important;
+  gap: 30px !important;
+  width: 100% !important;
+  max-width: 1200px !important;
+  margin: 40px auto !important;
+  padding: 0 20px !important;
+  box-sizing: border-box !important;
+}
+
+.seccion-dual-personalizada #modulo-suscribete-1,
+.seccion-dual-personalizada #modulo-valoramostupiso-1 {
+  flex: 1 1 45% !important;
+  max-width: 500px !important;
+  min-width: 320px !important;
+  background: transparent !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  border: none !important;
+}
+
+/* 2. TARJETAS BLANCAS (Mismo espacio interno para ambas) */
+.seccion-dual-personalizada .modulos-suscribete,
+.seccion-dual-personalizada .contenedor-valoracion {
+  background: #ffffff !important;
+  border: 1px solid #ffffff !important;
+  border-radius: 12px !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08) !important;
+  padding: 40px !important; 
+  box-sizing: border-box !important;
+  height: 100% !important;
+  display: flex !important;
+  flex-direction: column !important;
+  
+}
+
+/* 3. ELIMINACIÓN DE LA DOBLE CELDA GRIS */
+/* Forzamos a transparente todos los contenedores externos/intermedios */
+.seccion-dual-personalizada #modulo-valoramostupiso-1,
+.seccion-dual-personalizada .parte-izq,
+.seccion-dual-personalizada .parte-der {
+  background: transparent !important;
+  background-color: transparent !important;
+  border: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  box-shadow: none !important;
+}
+
+/* Aplicamos el gris ÚNICAMENTE a la caja interna de los inputs */
+.seccion-dual-personalizada .parte-der .cajas {
+  background-color: #e2e2e2 !important; /* Único fondo gris visible */
+  padding: 20px !important;
+  border-radius: 8px !important;
+  box-sizing: border-box !important;
+  margin-top: 20px !important;
+}
+
+/* 4. CENTRADO ESTRICTO DE TODOS LOS TEXTOS */
+.seccion-dual-personalizada #titulo-suscribete-1,
+.seccion-dual-personalizada #titulo-valoramostupido-1 {
+  font-family: 'Comfortaa', sans-serif !important;
+  color: #e65b0b !important;
+  font-size: 24px !important;
+  font-weight: 800 !important;
+  text-align: center !important;
+  text-transform: uppercase !important;
+  margin: 0 0 15px 0 !important;
+  display: block !important;
+  width: 100% !important;
+}
+
+.seccion-dual-personalizada .modulos-suscribete .titulo,
+.seccion-dual-personalizada .parte-izq .titulo,
+.seccion-dual-personalizada .subtitulo-val,
+.seccion-dual-personalizada .mensaje {
+  text-align: center !important;
+  color: #1a1f36 !important;
+  font-size: 14px !important;
+  font-weight: 500 !important;
+  font-style: normal !important;
+  margin-bottom: 15px !important;
+  width: 100% !important;
+  display: block !important;
+}
+
+/* 5. ARREGLO DE INPUTS (Ancho completo y sin letras cortadas) */
+/* Input de suscribir al 100% de la caja */
+.seccion-dual-personalizada #emailSuscripcion {
+  width: 100% !important;
+  height: 48px !important;
+  box-sizing: border-box !important;
+  margin-bottom: 15px !important;
+}
+
+.seccion-dual-personalizada .cajas input[type="text"],
+.seccion-dual-personalizada .cajas input[type="number"],
+.seccion-dual-personalizada .cajas select {
+  width: 100% !important;
+  height: 44px !important;
+  border: 1px solid #dde2f0 !important;
+  border-radius: 6px !important;
+  padding: 0 12px !important;
+  font-size: 14px !important;
+  background: #ffffff !important;
+  color: #1a1f36 !important;
+  box-sizing: border-box !important;
+  margin-bottom: 10px !important;
+}
+
+/* Rejilla de inputs para que no se aplasten */
+.seccion-dual-personalizada .fila-input {
+  display: flex !important;
+  gap: 10px !important;
+  margin-bottom: 5px !important;
+  width: 100% !important;
+}
+
+.seccion-dual-personalizada .fila-input > * {
+  flex: 1 1 100% !important;
+  min-width: 0 !important; /* Evita que los inputs se deformen o corten el texto */
+  margin-bottom: 0 !important;
+}
+
+/* 5. DISEÑO DE BOTONES SEGUROS Y PERMANENTES (Naranja macizo todo el tiempo) */
+.seccion-dual-personalizada .botonEnviar,
+.seccion-dual-personalizada .accionEnviar,
+.seccion-dual-personalizada .botonValorar,
+.seccion-dual-personalizada button.botonEnviar {
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  width: 100% !important;
+  height: 48px !important;
+  background: #e65b0b !important;
+  background-color: #e65b0b !important;
+  color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff !important;
+  border: none !important;
+  border-radius: 50px !important;
+  font-family: 'Comfortaa', sans-serif !important;
+  font-size: 15px !important;
+  font-weight: 700 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 1px !important;
+  cursor: pointer !important;
+  box-shadow: 0 4px 14px rgba(230, 91, 11, 0.25) !important;
+  transition: all 0.25s ease !important;
+  margin: 20px auto 0 auto !important;
+}
+
+/* Textos legales centrados */
+.seccion-dual-personalizada .opciones {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  gap: 8px !important;
+  margin-top: 15px !important;
+  width: 100% !important;
+}
+.seccion-dual-personalizada .opciones label {
+  color: #9aa0b4 !important;
+  font-size: 13px !important;
+}
+
+/* Centrar caja de correo y botón Enviar */
+.seccion-dual-personalizada .modulos-suscribete .cajas {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  width: 100% !important;
+}
+
+.seccion-dual-personalizada #emailSuscripcion,
+.seccion-dual-personalizada .botonEnviar {
+  width: 100% !important;
+  max-width: 400px !important; /* Evita que se estiren de más y los centra */
+  margin-left: auto !important;
+  margin-right: auto !important;
+  display: block !important;
+}
+
+/* Centrar textos de Valoramos tu propiedad */
+.seccion-dual-personalizada .parte-izq,
+.seccion-dual-personalizada .parte-izq .titulo,
+.seccion-dual-personalizada .subtitulo-val,
+.seccion-dual-personalizada .mensaje {
+  text-align: center !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  display: block !important;
+  width: 100% !important;
+}
+
+/* ELIMINACIÓN DE FONDO GRIS Y APLICACIÓN DE SOMBRA FLOTANTE */
+.seccion-dual-personalizada .contenedor-valoracion {
+  border: 1px solid #dde2f0 !important; 
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08) !important;
+  background: #ffffff !important;
+  background-color: #ffffff !important;
+}
+
+/* OBLIGAMOS A QUE LA CAJA INTERNA DE INPUTS TAMBIÉN SEA BLANCA */
+.seccion-dual-personalizada .parte-der .cajas {
+  background: #ffffff !important; /* Cambiado de gris a blanco para eliminar el bloque */
+  background-color: #ffffff !important;
+  border: none !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+}
+
+/* ASEGURAMOS QUE NO HAYA COLORES DE FONDO EN LOS CONTENEDORES DE INMOVILLA */
+.seccion-dual-personalizada #modulo-valoramostupiso-1,
+.seccion-dual-personalizada .parte-der {
+  background: transparent !important;
+  background-color: transparent !important;
+  border: none !important;
+}
+
+/* ELIMINACIÓN TOTAL Y FORZADA DE ESTILOS RESIDUALES */
+.seccion-dual-personalizada .contenedor-valoracion,
+.seccion-dual-personalizada #modulo-valoramostupiso-1,
+.seccion-dual-personalizada .parte-der,
+.seccion-dual-personalizada .parte-der .cajas {
+    background: #ffffff !important; /* Fuerza fondo blanco puro */
+    border: none !important;        /* Elimina bordes previos */
+    box-shadow: none !important;    /* Limpia sombras previas */
+    outline: none !important;       /* Por si el borde es un outline */
+}
+
+/* Aplicamos la sombra flotante ÚNICAMENTE al contenedor principal */
+.seccion-dual-personalizada #modulo-valoramostupiso-1 {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08) !important;
+    border: 1px solid #dde2f0 !important;
+    border-radius: 12px !important;
+}

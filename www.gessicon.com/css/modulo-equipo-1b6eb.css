@@ -1,0 +1,454 @@
+#modulo-equipo {
+    flex-direction: column;
+    align-items: center;
+    margin: 20px 0;
+    padding: 0px 0px 0px;
+}
+
+#modulo-equipo h1 {
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 20px 80px 20px 80px;
+    font-size: 24px;
+    background-color: var(--background1);
+    color: var(--color1);
+    line-height: 1.4em;
+}
+
+#equipo-contenedor {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: calc(100% - 140px);
+    overflow: hidden;
+}
+
+#equipo-carrusel {
+    display: flex;
+}
+
+#equipo-carrusel article {
+    display: flex;
+    width: calc(100vw - 190px);
+    height: 450px;
+    margin: 0 15px;
+    padding: 20px 0 0;
+    color: var(--colorTextos2);
+}
+
+#equipo-carrusel article .equipo-imagen {
+    width: 350px;
+    height: 450px;
+    margin: 0 auto;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#equipo-carrusel article .equipo-imagen, #equipo-carrusel-peq article .equipo-imagen {
+    background-image: url(../img/equipo/silueta.png);
+}
+
+#equipo-carrusel article .equipo-nombre {
+    font-size: 1.8em;
+    font-family: Comfortaa;
+    text-transform: capitalize;
+    display: inline-block;
+    background-color: var(--background1);
+    color: var(--color1);
+    padding: 8px;
+    border-radius: 6px;
+    cursor: default;
+    line-height: 24px;
+}
+
+#modulo-equipo .equipo-boton-trabajaconnosotros{
+    /*position: absolute;
+    bottom: 30%;
+    left: 15%;
+    font-size: 1.2em;
+    border: 1px solid var(--color1);
+    border-radius: 4px;
+    padding: 10px 20px;
+    color: var(--color3);
+    font-weight: bold;
+    background-color: var(--background3);
+    border: 1px solid #00000050;
+    text-align: center;*/
+    position: relative !important;
+    left: 0px !important;
+    bottom: 0px !important;
+    border: none !important;
+    border-radius: 8px !important;
+    width: max-content;
+    margin-left: auto;
+    font-size: 14px !important;
+    top: 0px;
+    padding: 8px 16px !important;
+    line-height: 16px;
+    filter: brightness(1) !important;
+    transition: .2s;
+    margin-top: auto;
+    color: var(--color3);
+    background-color:var(--background3);
+    border-radius: 10px;
+}
+
+#modulo-equipo .equipo-boton-trabajaconnosotros:hover {
+    filter: brightness(111%);
+}
+
+#equipo-carrusel article .equipo-puesto {
+    font-size: 1.5em;
+    line-height: 2em;
+    text-transform: capitalize;
+    font-style: oblique;
+    margin-top: 8px;
+}
+
+#equipo-carrusel article .equipo-titulo {
+    font-weight: bold;
+    font-size: 1.1em;
+    display: none;
+}
+
+#equipo-carrusel article .equipo-bloquederecha {
+    width: calc(100% - 350px);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-content: baseline;
+}
+
+#equipo-carrusel article .equipo-bloqueinfo {
+    margin-left: 20px;
+}
+
+#equipo-carrusel article .equipo-descripcion {
+    width: fit-content;
+    font-size: 1.6em;
+    margin: 16px 20px 0px;
+    font-family: Courgette;
+    text-indent: 45px;
+    background-image: url(../img/equipo/icono-quote.png);
+    background-position-x: 15px;
+    background-position-y: 10px;
+    background-color: #ebebeb;
+    border-radius: 60px 70px 0px 0px;
+    background-repeat: no-repeat;
+    background-size: 38px;
+    line-height: 1.5em;
+    padding: 30px 30px 30px 30px;
+    /*margin: 50px 5px 10px 10px;*/
+    box-sizing: border-box;
+    cursor: default;
+
+}
+#equipo-carrusel article .equipo-descripcion p {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 9;
+}
+
+
+#equipo-ver-mas-comerciales {
+    color: #333333;
+    font-size: 14px;
+    position: relative;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+    margin-left: 65px;
+}
+
+
+#modulo-equipo .equipo-flecha {
+    position: absolute;
+    top: 222px;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    opacity: 0.6;
+    transition: all .3s ease;
+}
+
+#modulo-equipo .equipo-flecha:hover {
+    opacity: 1;
+}
+
+#modulo-equipo #equipo-prev {
+    left: 20px;
+    background: url("../js/lib/revolution/assets/large_left.png") no-repeat scroll left top rgba(0, 0, 0, 0);
+}
+
+#modulo-equipo #equipo-next {
+    right: 20px;
+    background: url("../js/lib/revolution/assets/large_right.png") no-repeat scroll left top rgba(0, 0, 0, 0);
+}
+.equipo-bloque-peq .equipo-puesto {
+    text-align: center !important;
+    font-size: 1.1em !important;
+    margin-top: 15%;
+    width: 195px;
+}
+section#equipo-carrusel-peq .equipo-descripcion {
+    font-size: 16px;
+    text-align: center;
+    hyphens: auto;
+}
+#modulo-equipo #equipo-paginacion {
+    position: absolute;
+    top: 450px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#modulo-equipo #equipo-paginacion a {
+    box-sizing: border-box;
+    display: flex;
+    opacity: .6;
+    width: 10px;
+    height: 10px;
+    margin: 0 3px;
+    border-radius: 40px;
+    background-color: var(--background2);
+    border: 1px solid #00000050;
+}
+
+#modulo-equipo #equipo-paginacion a.selected {
+    opacity: 1;
+}
+
+#modulo-equipo #equipo-paginacion a span {
+    display: none;
+}
+
+
+section#equipo-carrusel-peq {
+    margin-top: 20px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    display: none;
+}
+
+article.equipo-bloque-peq {
+    width: 240px;
+    height: 260px;
+    margin: 20px 25px;
+    position: relative;
+    box-sizing: border-box;
+    text-align: center;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #444;
+}
+
+
+article.equipo-bloque-peq .equipo-imagen {
+    width: 222px;
+    height: 222px;
+    background-size: contain;
+    background-position:center top;
+    margin: 5px auto;
+    border-radius: 50%;
+    border: 1px solid #d1d1d1;
+}
+
+section#equipo-carrusel-peq .equipo-bloqueinfo {
+    width: 223px;
+    height: 223px !important;
+    position: absolute;
+    z-index: 1;
+    top: 2%;
+    left: 4%;
+    opacity: 0;
+    padding: 15px 15px 15px 15px !important;
+    box-sizing: border-box;
+    background-color: var(--background2);
+    color: var(--color2);
+    transition-duration: 0.5s;
+    border-radius: 100% !important;
+    cursor: default;
+    overflow: auto;
+}
+section#equipo-carrusel-peq .equipo-bloqueinfo::-webkit-scrollbar{
+    background: transparent;
+}
+
+section#equipo-carrusel-peq .equipo-bloqueinfo:hover {
+    opacity: .8 !important;
+}
+
+section#equipo-carrusel-peq .equipo-nombre {
+    opacity: 1 !important;
+}
+
+section#equipo-carrusel-peq .equipo-puesto {
+    font-size: 1.1em;
+    text-align: end;
+}
+
+section#equipo-carrusel-peq .equipo-telefonocontacto{
+    font-size: 1em;
+    text-align: center;
+}
+
+section#equipo-carrusel-peq .equipo-descripcion {
+    font-family: Courgette;
+    font-weight: normal;
+    margin-top: 20px;
+    width: 195px;
+}
+
+section#modulo-equipo .caroufredsel_wrapper {
+    min-width: 100%;
+}
+
+.equipo-nombre-principal {
+    text-align: center;
+    display: inline;
+}
+
+@media (max-width: 1650px) {
+    #equipo-carrusel article .equipo-descripcion{
+        font-size: 1.5em;
+        margin: 16px 15px 0px;
+    }
+    #equipo-carrusel article .equipo-descripcion p {
+        -webkit-line-clamp: 7;
+    }
+}
+
+@media (max-width: 1024px) {
+    #equipo-carrusel article .equipo-descripcion {
+        font-size: 1.3em;
+        margin-top: 25px;
+        margin: 16px 20px 0px;
+    }
+
+    #equipo-carrusel article .equipo-descripcion p {
+        -webkit-line-clamp: 5;
+    }
+
+    #equipo-carrusel article .equipo-imagen {
+        width: 250px;
+        height: 350px;
+    }
+
+    #equipo-carrusel article .equipo-bloquederecha {
+        font-size: .8em;
+    }
+}
+
+@media (max-width: 800px) {
+    #equipo-contenedor {
+        max-width: calc(100% - 100px);
+    }
+
+    #equipo-carrusel{
+        height: 700px;
+    }
+
+    #equipo-carrusel article .equipo-imagen {
+        width: 200px;
+        height: 200px;
+        background-position-y: top;
+    }
+
+    #equipo-carrusel article .equipo-bloquederecha {
+        width: 100%;
+        margin-top: -70px;
+        text-shadow: 1px 1px 1px white;
+        margin: 20px 0 10px 5px;
+        height: 170px;
+    }
+
+    #equipo-carrusel article .equipo-descripcion {
+        font-size: 1.2em;
+    }
+
+    #equipo-carrusel article {
+        flex-direction: column;
+        width: calc(100vw - 150px);
+    }
+
+    #modulo-equipo .equipo-boton-trabajaconnosotros {
+        position: static;
+        margin: 2px auto 0;
+        min-width: 150px;
+    }
+
+    #equipo-carrusel article .equipo-descripcion {
+        text-indent: 25px;
+        background-size: 25px;
+        font-size: 1.2em;
+        height: 150px;
+        border-radius: 10px;
+        padding: 30px;
+    }
+
+    #equipo-carrusel article .equipo-descripcion p {
+        -webkit-line-clamp: 4;
+    }
+
+    #modulo-equipo #equipo-paginacion {
+        bottom: 35px;
+    }
+
+}
+
+@media (max-width: 480px) {
+
+    #equipo-carrusel article {
+        flex-direction: column;
+        width: calc(100vw - 140px);
+    }
+
+    #equipo-carrusel article .equipo-descripcion {
+        background-position-x: 7px;
+        background-position-y: 0;
+        border-radius: 20px;
+        background-size: 22px;
+        line-height: 1.4em;
+        padding: 5px 5px 5px 10px;
+        margin: 20px 0 10px 5px;
+        height: 200px;
+    }
+
+    #equipo-carrusel article .equipo-descripcion p {
+        -webkit-line-clamp: 3;
+    }
+
+
+    #equipo-carrusel article {
+        margin: 0px 3px;
+    }
+
+    #equipo-carrusel article .equipo-bloquederecha {
+        margin-top: -40px;
+        height: 150px;
+    }
+
+    #equipo-contenedor {
+        max-width: calc(100% - 50px);
+        width: calc(100% - 130px);
+    }
+
+    #modulo-equipo .equipo-boton-trabajaconnosotros {
+        font-size: .9em;
+        padding: 3px;
+    }
+
+    #modulo-equipo #equipo-paginacion {
+        bottom: 20px;
+    }
+}

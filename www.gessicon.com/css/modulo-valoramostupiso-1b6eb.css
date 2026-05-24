@@ -1,0 +1,239 @@
+#modulo-valoramostupiso-1 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 70px 30px 90px;
+    box-sizing: border-box;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    overflow: hidden;
+    margin-top: 15px;
+    width: 100%;
+    justify-content: space-around;
+    text-shadow: 1px 1px 1px #222;
+    /*-webkit-transform: translateZ(0);*/
+}
+
+#modulo-valoramostupiso-1.fixed{
+    background-attachment: fixed;
+}
+
+#titulo-valoramostupido-1 {
+    display: none;
+}
+
+#modulo-valoramostupiso-1 video {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0);
+    object-position: center center;
+    object-fit: cover;
+    width: 100%;
+    height: 250px;
+    z-index: 0;
+    -webkit-transform: translateZ(0);
+}
+
+#modulo-valoramostupiso-1 .titulo {
+    font-size: 3.6em;
+    line-height: 1.2em;
+    font-style: italic;
+    z-index: 1;
+    font-weight: bold;
+    text-align: center;
+    /*padding-bottom: 120px;*/
+}
+
+#modulo-valoramostupiso-1 .mensaje {
+    font-size: 0.5em;
+    line-height: 1.2em;
+    z-index: 1;
+    text-align: center;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+#modulo-valoramostupiso-1 .mensajeFijo {
+    font-size: 1.3em;
+    line-height: 1.1em;
+    z-index: 1;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+#modulo-valoramostupiso-1 .parte-izq {
+    width: 300px;
+    z-index: 1;
+}
+
+#modulo-valoramostupiso-1 .parte-der {
+    width: 440px;
+    background-color: #00000033;
+    padding: 12px 16px 2px;
+    border-radius: 8px;
+    z-index: 1;
+}
+
+#modulo-valoramostupiso-1 .cajas {
+    z-index: 1;
+}
+
+#modulo-valoramostupiso-1 .cajas > div {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+
+#modulo-valoramostupiso-1 .cajas input, #modulo-valoramostupiso-1 .cajas select {
+    padding-left: 8px;
+    font-style: italic;
+    font-size: 1.1em;
+    color: #333;
+    border-radius: 5px;
+}
+
+#modulo-valoramostupiso-1 .cajas #valorar-calle {
+    width: 69%;
+}
+
+#modulo-valoramostupiso-1 .cajas #valorar-ciudad {
+    width: 30%;
+}
+
+#modulo-valoramostupiso-1 .cajas #valorar-tipologia {
+    width: 28%;
+}
+
+#modulo-valoramostupiso-1 .cajas #valorar-planta {
+    width: 18%;
+}
+
+#modulo-valoramostupiso-1 .cajas #valorar-habitaciones {
+    width: 26%;
+}
+
+#modulo-valoramostupiso-1 .cajas #valorar-ascensor {
+    width: 25%;
+}
+
+.formuEnviar .bloqueEnviar {
+    display: flex;
+    flex-direction: column;
+    margin: 5px 0 5px 5px;
+}
+
+.formuEnviar .texto-form-politica {
+    text-indent: 22px;
+    font-size: .9em;
+}
+
+.formuEnviar .bloqueEnviar span {
+    font-weight: bold;
+}
+
+.formuEnviar .bloqueEnviar input {
+    border-top:0;
+    border-left:0;
+    border-right:0;
+}
+
+button#enviarValoracion {
+    width: 100%;
+    background-color: var(--background1);
+    color: var(--color1);
+    font-size: 1.1em;
+    margin: 10px auto;
+    border-radius: 4px;
+}
+
+form#formu-valoramostupiso, .texto-titulo-form-valoramostupiso {
+    max-width: 400px;
+}
+
+.texto-titulo-form-valoramostupiso {
+    max-width: 400px;
+    margin-bottom: 20px;
+}
+
+
+#modulo-valoramostupiso-1 .cajas > div.opciones {
+    font-size: 1.1em;
+    padding: 8px 10px;
+    display: flex;
+    text-shadow: 1px 1px 1px #222;
+    flex-direction: column;
+}
+
+#modulo-valoramostupiso-1 div.resultadovaloramostupiso {
+    display: none;
+    width: 100%;
+    border: 1px solid #A8A8A8;
+    color: white;
+    font-size: 1.5em;
+    font-weight: bold;
+    padding: 5px 0;
+    margin: 10px auto 20px;
+    border-radius: 4px;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+#modulo-valoramostupiso-1 div.resultadovaloramostupiso.ok {background-color: rgb(81, 197, 60);}
+#modulo-valoramostupiso-1 div.resultadovaloramostupiso.ko {background-color: rgb(197, 60, 65);}
+
+#modulo-valoramostupiso-1 label {
+    cursor: pointer;
+}
+
+#modulo-valoramostupiso-1 button.botonValorar {
+    width: 100%;
+    border: 1px solid #f2f2f244;
+    background-color: var(--background1);
+    color: var(--color1);
+    font-size: 1.1em;
+    margin: 10px auto 20px;
+    border-radius: 4px;
+    text-align: center;
+    filter: brightness(120%);
+}
+
+#modulo-valoramostupiso-1 button.botonValorar:hover {
+    filter: brightness(140%);
+}
+
+#modal-valoramostupiso button#enviarValoracion.enviando {
+    background-image: url(../img/loading_fff.gif);
+    background-size: 20px;
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+}
+
+
+#modulo-valoramostupiso-1 input {
+    font-size: 1.2em;
+}
+
+@media (max-width: 600px) {
+    #modulo-valoramostupiso-1 video {
+        width: auto;
+        min-height: 100%;
+    }
+
+    #modulo-valoramostupiso-1 {
+        flex-direction: column;
+        padding: 60px 5px 50px;
+    }
+
+    #modulo-valoramostupiso-1.fixed {
+        background-attachment: local !important;
+    }
+
+    #modulo-valoramostupiso-1 .parte-der {
+        width: 90vw;
+    }
+
+    #modulo-valoramostupiso-1 .titulo {
+        padding-bottom: 50px;
+        font-size: 3em;
+    }
+}

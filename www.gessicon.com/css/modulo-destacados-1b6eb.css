@@ -1,0 +1,189 @@
+.modulos-destacados-1 {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 40px;
+}
+
+.modulos-destacados-1 #destacados-contenedor {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    max-width: calc(100% - 180px);
+    overflow: hidden;
+}
+
+#titulo-destacados-1 {
+    display: none;
+}
+
+.modulos-destacados-1  #destacados-carrusel {
+    display: flex;
+}
+
+.modulos-destacados-1  #destacados-carrusel article {
+    min-width: 240px;
+    max-width: 240px;
+    height: 320px;
+    margin: 0 10px;
+}
+
+.modulos-destacados-1  #destacados-carrusel .destacados-ficha-bloque1 {
+    position: relative;
+    height: 150px;
+    border: 5px solid #ededed;
+    font-size: 15px;
+    box-shadow: 0 1px 4px rgba(0,0,0,.2);
+    cursor: pointer;
+}
+
+.modulos-destacados-1  #destacados-carrusel .destacados-ficha-bloque1 .precio1 {
+    position: absolute;
+    bottom: -5px;
+    right: -5px;
+    padding: 5px 15px;
+    background-color: var(--background1-78);
+    color: var(--color1);
+}
+
+.modulos-destacados-1  #destacados-carrusel .destacados-ficha-bloque1:hover + .destacados-ficha-bloque2 .destacados-masdatos,
+.modulos-destacados-1  #destacados-carrusel .destacados-ficha-bloque2 .destacados-masdatos:hover {
+    display: block;
+}
+
+.modulos-destacados-1  #destacados-carrusel .destacados-titulo {
+    margin-top: 10px;
+    font-size: 16px;
+    color: var(--colorTextos2);
+}
+
+.modulos-destacados-1  #destacados-carrusel .flechaprev,
+.modulos-destacados-1  #destacados-carrusel .flechanext {
+    opacity: 0;
+    transition: all .3s ease;
+}
+
+.modulos-destacados-1  #destacados-carrusel .flechaprev {
+    left: 0;
+}
+
+.modulos-destacados-1  #destacados-carrusel .flechanext {
+    right: 0;
+}
+
+.modulos-destacados-1  #destacados-carrusel article:hover .flechaprev,
+.modulos-destacados-1  #destacados-carrusel article:hover .flechanext {
+    opacity: 1;
+}
+
+.modulos-destacados-1  #destacados-carrusel article:hover .flechaprev {
+    left: 5px;
+}
+
+.modulos-destacados-1  #destacados-carrusel article:hover .flechanext {
+    right: 5px;
+}
+
+
+
+.modulos-destacados-1  #destacados-carrusel .destacados-ficha-bloque2 {
+    position: relative;
+    z-index: 2;
+    padding-top: 10px;
+}
+
+.modulos-destacados-1  #destacados-carrusel .destacados-masdatos {
+    display: none;
+    box-sizing: border-box;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 5px 0;
+    background-color: #fff;
+    color: var(--colorTextos2);
+    border: 1px dashed #ddd;
+    transition: .5s;
+
+}
+
+.modulos-destacados-1 #destacados-carrusel .destacados-masdatos li {
+    padding: 2px 10px;
+    border-bottom: 1px dashed #ddd;
+}
+
+.modulos-destacados-1 #destacados-carrusel .destacados-masdatos li:last-child {
+    border-bottom: 0;
+}
+
+.modulos-destacados-1 .destacados-flecha {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    opacity: 0.6;
+    transition: all .3s ease;
+}
+
+.modulos-destacados-1 .destacados-flecha:hover {
+    opacity: 1;
+}
+
+.modulos-destacados-1 #destacados-prev {
+    left: 8%;
+    background: url("../js/lib/revolution/assets/large_left.png") no-repeat scroll left top rgba(0, 0, 0, 0);
+}
+
+.modulos-destacados-1 #destacados-next {
+    right: 8%;
+    background: url("../js/lib/revolution/assets/large_right.png") no-repeat scroll left top rgba(0, 0, 0, 0);
+}
+
+.modulos-destacados-1 #destacados-paginacion {
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.modulos-destacados-1 #destacados-paginacion a {
+    box-sizing: border-box;
+    display: flex;
+    opacity: .6;
+    width: 10px;
+    height: 10px;
+    margin: 0 3px;
+    border-radius: 40px;
+    background-color: var(--background2);
+    border: 1px solid #00000050;
+}
+
+.modulos-destacados-1 #destacados-paginacion a.selected {
+    opacity: 1;
+}
+
+.modulos-destacados-1 #destacados-paginacion a span {
+    display: none;
+}
+
+@media (max-width: 800px)
+{
+    .modulos-destacados-1 {
+        display: none;
+    }
+}
+@media (max-width:1600px){
+    .modulos-destacados-1 #destacados-prev {
+        left: 3%;
+    }
+
+    .modulos-destacados-1 #destacados-next {
+        right: 3%;
+
+    }
+}
+
+
+
