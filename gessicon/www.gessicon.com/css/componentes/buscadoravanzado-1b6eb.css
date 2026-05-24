@@ -1,0 +1,227 @@
+#modulo-buscAvanzado-1 {
+    overflow: visible;
+}
+
+#modulo-buscAvanzado-1[style*='block'] {
+    display: flex !important;
+}
+
+#modulo-buscAvanzado-1 .tituloCabecera {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 20px 80px 5px 80px;
+    font-size: 24px;
+    background-color: #ebebeb;
+    color: var(--colorTextos2);
+    line-height: 1.4em;
+}
+
+
+#modulo-buscAvanzado-1 .tituloCabecera > * {
+    margin-bottom: 15px;
+}
+
+#modulo-buscAvanzado-1 .tituloCabecera h4 {
+    text-transform: uppercase;
+}
+
+#modulo-buscAvanzado-1 #buscAvanzado-buscador {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 40px 10%;
+    color: var(--colorTextos2);
+}
+
+#modulo-buscAvanzado-1 .buscarAvanzado {
+    font-size: 18px;
+    padding: 10px 15px;
+}
+
+#modulo-buscAvanzado-1 .bloqueCheckbox {
+    align-items: center;
+    width: 100%;
+    margin-right: 50px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+#modulo-buscAvanzado-1 .bloqueCheckbox label {
+    white-space: nowrap;
+}
+
+#modulo-buscAvanzado-1 .bloque {
+    display: flex;
+    margin-bottom: 30px;
+}
+
+#modulo-buscAvanzado-1 .bloque:last-child {
+    margin-bottom: 0;
+}
+
+#modulo-buscAvanzado-1 .bloque1 {
+    justify-content: space-between;
+}
+
+#modulo-buscAvanzado-1 #limref2 {
+    padding: 10px 15px;
+    font-size: 16px;
+    width: 150px;
+}
+
+#modulo-buscAvanzado-1 .customMultipleOptions,
+#modulo-buscAvanzado-1 .customSelectMultiple {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 10px 5px;
+}
+
+#modulo-buscAvanzado-1 .bloqueSelects {
+    display: flex;
+    justify-content: left;
+}
+
+#modulo-buscAvanzado-1 .bloqueSelects > * {
+    min-width: 120px;
+    margin-right: 20px;
+}
+
+#modulo-buscAvanzado-1 .bloqueSelects .bloque-select:last-of-type{
+    min-width: 140px;
+    margin-right: 20px;
+}
+
+#modulo-buscAvanzado-1 .bloqueSelects #metros,
+#modulo-buscAvanzado-1 .bloqueSelects #metros2{
+    min-width: 130px;
+}
+
+#modulo-buscAvanzado-1 [for=limprov2] {
+    margin-bottom: 5px;
+}
+
+#modulo-buscAvanzado-1 .buscadorTipos {
+    border: solid 1px #ddd;
+}
+
+#buscAvanzado-buscador h5 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+#buscAvanzado-buscador .opcionesColumna {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#buscAvanzado-buscador .opcionesColumna > div {
+    width: 100%;
+}
+
+#buscAvanzado-buscador .opcionesColumna .bloque-input {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+#buscAvanzado-buscador .opcionesColumna .bloque-input input {
+    width: calc(100% - 30px);
+}
+
+#modulo-buscAvanzado-1 .bloqueBuscarAvanzado {
+    display: flex;
+}
+
+#modulo-buscAvanzado-1 .bloqueBuscarAvanzado > div {
+    display: flex;
+}
+
+#modulo-buscAvanzado-1 .ocultar {
+    cursor: pointer;
+}
+
+#modulo-buscAvanzado-1 .cajaGrupoTiposZonas {
+    box-sizing: border-box;
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    max-height: 200px;
+    overflow-y: auto;
+    padding: 5px 2px;
+    background-color: #fff;
+    cursor: initial;
+    z-index:100;
+}
+
+
+
+@media (max-width: 1100px) {
+
+    #modulo-buscAvanzado-1 #buscAvanzado-buscador {
+        padding: 40px 5%;
+    }
+
+    #modulo-buscAvanzado-1 .bloque1 {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    #modulo-buscAvanzado-1 .bloque1 .bloqueCheckbox {
+        order: 1;
+        justify-content: center;
+        flex-wrap: wrap;
+        width: 100%;
+        margin-right: initial;
+    }
+
+    #modulo-buscAvanzado-1 .bloque1 label {
+        white-space: nowrap;
+    }
+
+    #modulo-buscAvanzado-1 .bloqueCheckbox > div {
+        margin-bottom: 20px;
+        margin-right: 10px;
+    }
+
+    #modulo-buscAvanzado-1 .bloqueBuscarAvanzado {
+        margin-bottom: 20px;
+    }
+
+    #modulo-buscAvanzado-1 .bloqueCheckbox {
+        justify-content: center;
+    }
+
+
+}
+
+@media (max-width: 900px) {
+
+    #modulo-buscAvanzado-1 .bloqueSelects {
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    #modulo-buscAvanzado-1 .bloqueSelects > div {
+        width: 47%;
+        margin-bottom: 20px;
+    }
+
+}
+
+@media (max-width: 500px) {
+    #modulo-buscAvanzado-1 .bloqueSelects > div {
+        width: 100%;
+    }
+
+    #modulo-buscAvanzado-1 .opcionesColumna > div {
+        margin-bottom: 15px;
+    }
+
+    #limciudad2 {
+        height: 40px!important;
+    }
+}

@@ -1,0 +1,170 @@
+#cabecera-buscador {
+    display: flex;
+    justify-content: center;
+    padding: 10px 15px;
+    background-color: rgba(0, 0, 0, 0.4);
+    font-size: 14px;
+    color: var(--colorTextos2);
+    transition: 0.3s;
+}
+#cabecera-buscador:hover {
+    background-color: rgba(0, 0, 0, 0.9);
+}
+#cabecera-buscador > div {
+    margin: 0 5px;
+}
+#cabecera-buscador .custom-select,
+#cabecera-buscador .custom-select-html,
+#cabecera-buscador .bloque-input {
+    width: 170px;
+}
+#cabecera-buscador .bloque-input,
+#cabecera-buscador .bloque-checkbox {
+    display: flex;
+    align-items: center;
+}
+#cabecera-buscador .bloque-checkbox {
+    padding-top: 3px;
+}
+#cabecera-buscador .bloque-checkbox span,
+#cabecera-buscador .bloque-checkbox label {
+    padding: 5px;
+}
+#cabecera-buscador .bloque-input input,
+#cabecera-buscador .buttons button {
+    width: 100%;
+    font-size: 14px;
+}
+#cabecera-buscador .buttons button {
+    min-width: 90px;
+}
+#cabecera-buscador .buscarRapido,
+#cabecera-buscador .cabecera-buscador-precio {
+    width: 130px;
+}
+#cabecera-buscador .cabecera-buscador-precio span {
+    font-weight: bolder;
+}
+#cabecera-buscador .cabecera-buscador-ref {
+    width: 80px;
+}
+#cabecera-bloque-buscador .d-none { display: none !important; }
+#cabecera-bloque-buscador .buscarRapido{
+    background-color: var(--background1-78);
+    color: var(--color1);
+}
+#cabecera-bloque-buscador .buttons {
+    display: flex;
+}
+#cabecera-bloque-buscador .cajaGrupoTiposZonas {
+    box-sizing: border-box;
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    max-height: 200px;
+    overflow-y: auto;
+    padding: 5px 2px;
+    background-color: #fff;
+    cursor: initial;
+}
+
+#cabecera-bloque-buscador.cabecera-bloque-buscador-1 {
+    top: 0;
+    padding:20px;
+    left: 100px;
+    transform: initial;
+    width:350px;
+    height:calc( 100% - 170px );
+    box-sizing:border-box;
+    display:flex;
+    flex-direction:column;
+}
+#cabecera-bloque-buscador.cabecera-bloque-buscador-1.noDestacado {
+    height:calc( 100% - 25px );
+    display: flex;
+    justify-content:center;
+}
+#cabecera-bloque-buscador.cabecera-bloque-buscador-1 #cabecera-buscador .custom-select{
+    width:100%;
+}
+#cabecera-bloque-buscador #cabecera-buscador .componentes-v3,
+#cabecera-bloque-buscador #cabecera-buscador .custom-select{
+    min-width: 270px;
+}
+#cabecera-bloque-buscador #cabecera-buscador #inmotipos{
+    max-width: 170px;
+}
+#cabecera-bloque-buscador.cabecera-bloque-buscador-1 #cabecera-buscador {
+    display:flex;
+    flex-direction:column;
+    flex: 1 1 100%;
+    align-items: center;
+    justify-content: space-between;
+    padding:25px 25px;
+    max-height:400px;
+}
+#cabecera-bloque-buscador.cabecera-bloque-buscador-1 #cabecera-buscador div {
+    height:40px !important;
+    max-height:40px !important;
+    width:100%;
+}
+#cabecera-bloque-buscador.cabecera-bloque-buscador-1 #cabecera-buscador input {
+    height:40px !important;
+    max-height:40px !important;
+}
+#cabecera-bloque-buscador.cabecera-bloque-buscador-1 #cabecera-buscador div::after{
+    height:40px;
+}
+#cabecera-bloque-buscador.cabecera-bloque-buscador-1 #cabecera-buscador div ul{
+    z-index: 1;
+}
+#cabecera-bloque-buscador .custom-select select,#cabecera-bloque-buscador div,#cabecera-bloque-buscador input{
+    font-weight:bold !important;
+    color: rgba(60, 63, 65, 0.98) !important;
+    font-family: Muli, helvetica, arial, verdana !important;
+}
+#cabecera-bloque-buscador .custom-select select{
+}
+#cabecera-bloque-buscador input::-webkit-input-placeholder {
+    color: rgba(60, 63, 65, 0.98) !important;
+}
+#cabecera-bloque-buscador input::-moz-placeholder {
+    color: rgba(60, 63, 65, 0.98) !important;
+}
+#cabecera-bloque-buscador input:-ms-input-placeholder {
+    color: rgba(60, 63, 65, 0.98) !important;
+}
+#cabecera-bloque-buscador input:-moz-placeholder {
+    color: rgba(60, 63, 65, 0.98) !important;
+}
+#cabecera-bloque-buscador label{
+    color:#fff;
+}
+
+#cabecera-buscador label[for=verMapaRapidoCabecera] {
+    white-space: nowrap;
+}
+
+.custom-select, .custom-select-html {
+    height: 30px;
+}
+
+@media (max-width: 1180px) {
+    #cabecera-bloque-buscador {
+        display: none;
+    }
+}
+
+@media (max-width: 800px) {
+
+    #cabecera-bloque-buscador.cabecera-bloque-buscador-1{
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+}
+@media (max-width: 480px){
+    #cabecera-bloque-buscador{
+        display: none;
+    }
+}

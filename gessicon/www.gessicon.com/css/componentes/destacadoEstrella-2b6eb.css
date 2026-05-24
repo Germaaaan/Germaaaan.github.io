@@ -1,0 +1,129 @@
+#slider-bloque-estrella {
+    position: absolute;
+    bottom: 15%;
+    right: 5%;
+    z-index: 50;
+    padding: 10px;
+    background-color: #f3f3f3cc;
+    cursor: pointer;
+}
+
+#slider-bloque-estrella #slider-estrella-felchas {
+    display: none;
+    position: absolute;
+    bottom: 100%;
+    right: 0;
+}
+
+#slider-bloque-estrella:hover #slider-estrella-felchas,
+#slider-estrella-felchas:hover {
+    display: block;
+}
+#slider-bloque-estrella article {
+    width: 340px;
+    height: 180px;
+}
+
+#slider-bloque-estrella .titulo1,
+#slider-bloque-estrella .precio1 {
+    box-sizing: border-box;
+    max-width: 100%;
+    padding: 15px 20px;
+    font-size: 16px;
+    background-color: var(--background2-78);
+    color: var(--color2);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+#slider-bloque-estrella .titulo1 {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+#slider-bloque-estrella .precio1 {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+}
+
+#slider-estrella-masdatos {
+    display: flex;
+    box-sizing: border-box;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    padding: 5px 10px;
+    background-color: #f3f3f3cc;
+    transition: .5s;
+}
+
+#slider-estrella-masdatos ul {
+    display: flex;
+    width: 100%;
+    color: var(--colorTextos2);
+    justify-content: space-between;
+}
+#slider-estrella-masdatos li {
+    flex-direction: column;
+}
+#slider-estrella-masdatos li .fa-2x {
+    font-size: 20px;
+}
+
+
+#slider-bloque-estrella .bloque-icono-name-valor1 {
+    padding: 5px 0;
+}
+
+#slider-bloque-estrella .bloque-icono-name-valor1:last-child {
+    border-bottom: 0;
+}
+
+#slider-bloque-estrella:hover #slider-estrella-masdatos {
+    display: flex;
+}
+
+#slider-bloque-estrella .propiedad {
+    cursor: pointer;
+}
+
+#slider-bloque-estrella .flechaprev,
+#slider-bloque-estrella .flechanext {
+    opacity: 0;
+    transition: all .3s ease;
+}
+
+#slider-bloque-estrella article:hover .flechaprev,
+#slider-bloque-estrella article:hover .flechanext {
+    opacity: 1;
+}
+
+#slider-bloque-estrella article:hover .flechaprev {
+    left: 15px;
+}
+
+#slider-bloque-estrella article:hover .flechanext {
+    right: 15px;
+}
+
+@media (max-width: 1399px) {
+
+    #slider-bloque-estrella {
+        right: 60px;
+        bottom: 15%;
+    }
+
+}
+
+@media (max-width: 900px) {
+
+    #modulo-slider-1 #modulo-slider-2 #modulo-slider-3 #modulo-slider-4 #modulo-slider-5 #slider-bloque-estrella {
+        display: none;
+    }
+
+}
+

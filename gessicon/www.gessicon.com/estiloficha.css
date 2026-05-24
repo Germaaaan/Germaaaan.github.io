@@ -1,0 +1,336 @@
+/* ==========================================================================
+   HOJA DE ESTILOS PERSONALIZADA (NUEVAS CARACTERÍSTICAS, PRECIOS Y BOTONES)
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. PASTILLAS INFORMATIVAS (Características nuevas del inmueble)
+   -------------------------------------------------------------------------- */
+/* Contenedor principal para alinearlos de lado a lado */
+.contenedor-caracteristicas-nuevas {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 12px !important; /* Espacio uniforme entre las pastillas */
+    margin: 20px 0 !important;
+    padding: 0 !important;
+}
+
+/* Diseño de las pastillas informativas (Estáticas, no clicables) */
+.pastilla-info {
+    background: linear-gradient(135deg, #f0610e 0%, #d65b14 50%, #d44d00 100%) !important;
+    color: #ffffff !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding: 8px 16px !important;    /* Tamaño compacto */
+    border-radius: 10px !important;   /* Bordes suavizados, estilo etiqueta */
+    font-family: 'Comfortaa', sans-serif !important;
+    font-size: 14px !important;
+    font-weight: 700 !important;
+    text-transform: uppercase !important;
+    box-shadow: 0 2px 8px rgba(240, 97, 14, 0.2) !important; /* Sombra muy sutil */
+    cursor: default !important;       /* Cursor normal (indica que no se clica) */
+    pointer-events: none !important;  /* Desactiva por completo cualquier interacción */
+}
+
+/* Estilo para los iconos dentro de la pastilla */
+.pastilla-icono {
+    width: 18px !important;
+    height: 18px !important;
+    margin-right: 8px !important;     /* Separación entre icono y texto */
+    filter: invert(1) !important;     /* Cambia el icono a blanco automáticamente */
+    display: block !important;
+}
+
+
+/* --------------------------------------------------------------------------
+   2. TARJETA DE LA AGENCIA (Datos de contacto)
+   -------------------------------------------------------------------------- */
+/* Contenedor principal de la tarjeta de la agencia */
+.fichapropiedad-datosagencia {
+    background: #ffffff !important;
+    border-left: 5px solid #d65b14 !important; /* Línea lateral con tu naranja corporativo */
+    padding: 15px 25px !important;
+    border-radius: 8px !important;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05) !important;
+    margin: 15px 0 !important;
+    display: inline-block !important; /* Se ajusta al tamaño del contenido */
+    font-family: 'Comfortaa', sans-serif !important;
+}
+
+/* Estilo para el nombre de la empresa */
+.datosagencia-nombre {
+    color: #2c3e50 !important; /* Un gris muy oscuro, elegante */
+    font-size: 18px !important;
+    font-weight: 800 !important;
+    text-transform: uppercase !important;
+    margin: 0 0 8px 0 !important;
+    letter-spacing: 0.5px !important;
+}
+
+/* Contenedor del teléfono e icono */
+.datosagencia-telf {
+    display: flex !important;
+    align-items: center !important;
+    color: #d65b14 !important; /* Texto del teléfono en naranja */
+    font-size: 20px !important; /* Más grande para que destaque mucho */
+    font-weight: 800 !important;
+}
+
+
+/* --------------------------------------------------------------------------
+   3. BLOQUE DE PRECIO Y REBAJADO
+   -------------------------------------------------------------------------- */
+/* El contenedor padre: ahora es una cajita compacta a la derecha que junta ambos elementos */
+.fichapropiedad-bloqueprecio {
+    display: inline-flex !important;
+    flex-direction: column !important; /* Coloca la rebaja justo debajo del precio */
+    align-items: flex-end !important; /* Alinea los textos a la derecha */
+    gap: 10px !important; /* Espacio controlado entre el precio y el rebajado */
+    float: right !important;
+    margin: -120px 0 20px 0 !important; /* Sube TODO el bloque a la altura ideal */
+}
+
+/* La tarjeta del precio actual (Limpia y con la estética de la agencia) */
+.fichapropiedad-precio {
+    background: #ffffff !important;
+    border-left: 5px solid #d65b14 !important; /* Línea lateral naranja */
+    padding: 10px 20px !important;
+    border-radius: 8px !important;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05) !important;
+    display: inline-block !important;
+    font-family: 'Comfortaa', sans-serif !important;
+    color: #2c3e50 !important;
+    font-size: 34px !important;
+    font-weight: 800 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.5px !important;
+}
+
+/* La tarjeta del rebajado (Se coloca sola debajo del precio) */
+.rebajado {
+    margin: -70px 0 20px 0 !important; 
+    float: right !important;
+    background: #ffffff !important;
+    border-left: 5px solid #d65b14 !important; /* Línea lateral naranja */
+    padding: 8px 15px !important;
+    border-radius: 8px !important;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05) !important;
+    display: inline-block !important;
+    font-family: 'Comfortaa', sans-serif !important;
+    color: #d65b14 !important; /* Texto naranja */
+    font-size: 23px !important;
+    font-weight: 800 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.5px !important;
+}
+
+/* El precio antiguo tachado dentro del span */
+.rebajado span {
+    color: #95a5a6 !important;
+    text-decoration: line-through !important;
+    font-weight: 600 !important;
+    margin: 0 4px !important;
+}
+
+
+/* --------------------------------------------------------------------------
+   4. BOTONES PERSONALIZADOS (Contactar, Compartir, etc.)
+   -------------------------------------------------------------------------- */
+.btn-personalizado {
+    background: linear-gradient(135deg, #f0610e 0%, #d65b14 50%, #d44d00 100%) !important;
+    color: #ffffff !important;
+    text-decoration: none !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding: 15px 70px !important;
+    font-size: 16px !important;
+    font-weight: 800 !important;
+    border-radius: 50px !important;
+    font-family: 'Comfortaa', sans-serif !important;
+    text-transform: uppercase !important;
+    box-shadow: 0 4px 15px rgba(240, 97, 14, 0.4) !important;
+    transition: all 0.3s ease !important;
+    margin: 20px 10px !important; /* Margen lateral para que no se peguen entre sí */
+    border: none !important;        /* Quita el borde por defecto del botón */
+    cursor: pointer !important;     /* Hace que aparezca la mano al pasar el cursor */
+}
+
+/* Efecto Hover (Animación hacia arriba) */
+.btn-personalizado:hover {
+    transform: translateY(-5px) !important;
+    box-shadow: 0 6px 20px rgba(240, 97, 14, 0.6) !important;
+    filter: brightness(1.1) !important;
+}
+
+/* Estilo para los iconos SVG dentro del botón */
+.btn-icono {
+    width: 20px !important;
+    height: 20px !important;
+    margin-right: 10px !important; /* Espacio entre el icono y el texto */
+    filter: invert(1) !important;  /* Fuerza a que el icono SVG se vuelva blanco */
+}
+
+
+/* --------------------------------------------------------------------------
+   5. BOTÓN VOLVER INICIO (Posicionamiento Flotante Superior Izquierdo)
+   -------------------------------------------------------------------------- */
+#btn-volver-home {
+    position: fixed !important;    /* Lo fija a la pantalla, no a la web */
+    top: 30px !important;        /* Distancia desde arriba */
+    left: 30px !important;         /* Distancia desde la izquierda */
+    z-index: 10000 !important;     /* Para que flote por encima de TODO */
+    background: linear-gradient(135deg, #f0610e 0%, #d65b14 50%, #d44d00 100%) !important;
+    color: #ffffff !important;
+    text-decoration: none !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    padding: 12px 25px !important; /* Compacto para no estorbar la navegación */
+    font-size: 14px !important;
+    font-weight: 800 !important;
+    border-radius: 50px !important;
+    font-family: 'Comfortaa', sans-serif !important;
+    text-transform: uppercase !important;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3) !important; /* Sombra más fuerte para efecto "vuelo" */
+    transition: all 0.3s ease !important;
+}
+
+/* Efecto Hover (Crece ligeramente y potencia la sombra) */
+#btn-volver-home:hover {
+    transform: scale(1.1) !important; 
+    box-shadow: 0 10px 25px rgba(240, 97, 14, 0.5) !important;
+    filter: brightness(1.1) !important;
+}
+
+
+/*--------------------------------------------*/
+
+
+/* Forzamos el cambio en las flechas anulando cualquier contenido previo */
+.flechaprev, .flechanext {
+    display: inline-flex !important; /* Asegura que se vea */
+    align-items: center;
+    justify-content: center;
+    width: 55px !important;
+    height: 55px !important;
+    background: linear-gradient(135deg, #f0610e 0%, #d35811 100%) !important;
+    border-radius: 50% !important;
+    text-decoration: none !important;
+    box-shadow: 0 4px 12px rgba(240, 97, 14, 0.4) !important;
+    transition: all 0.3s ease !important;
+    cursor: pointer !important;
+    border: none !important;
+}
+
+/* Ocultamos cualquier SVG que haya dentro de las flechas */
+.flechaprev svg, .flechanext svg, 
+.flechaprev img, .flechanext img {
+    display: none !important;
+}
+
+/* Dibujamos la flecha blanca nueva */
+.flechaprev::before, .flechanext::before {
+    content: '' !important;
+    display: block;
+    width: 14px;
+    height: 14px;
+    border-left: 4px solid white !important;
+    border-bottom: 4px solid white !important;
+}
+
+/* Orientación Izquierda */
+.flechaprev::before {
+    transform: rotate(45deg);
+    margin-left: 5px;
+}
+
+/* Orientación Derecha */
+.flechanext::before {
+    transform: rotate(-135deg);
+    margin-right: 5px;
+}
+
+/* Efecto Hover */
+.flechaprev:hover, .flechanext:hover {
+    filter: brightness(1.2) !important;
+}
+
+
+/* =====================================================
+   CERTIFICACIÓN ENERGÉTICA (FICHA DE PROPIEDAD)
+   ===================================================== */
+
+/* Contenedor principal del módulo */
+#fichapropiedad-certificacionenergetica {
+    margin: 30px 0;
+    font-family: 'Comfortaa', sans-serif; /* Alineado con tu nueva tipografía */
+}
+
+#fichapropiedad-certificacionenergetica h2 {
+    color: var(--e-text);
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 16px;
+}
+
+/* Estilo general para la tabla de eficiencia */
+#fichapropiedad-certificacionenergetica table.table-bordered {
+    border-collapse: collapse !important;
+    border: 1px solid var(--e-border) !important;
+    width: 100%;
+    max-width: 500px; /* Para que no se estire demasiado en pantallas grandes */
+    box-shadow: var(--e-shadow);
+    border-radius: var(--e-radius-sm);
+    overflow: hidden;
+}
+
+#fichapropiedad-certificacionenergetica table.table-bordered td {
+    border: 1px solid var(--e-border) !important;
+    color: var(--e-text);
+    font-family: sans-serif;
+}
+
+/* Encabezados pequeños de la tabla */
+#fichapropiedad-certificacionenergetica .tac.t1.c1 {
+    text-align: center;
+    background-color: var(--e-surface2);
+    color: var(--e-text-light);
+    font-weight: 600;
+    line-height: 1.3;
+}
+
+/* Forzamos que las celdas de las imágenes tengan un fondo limpio */
+#fichapropiedad-certificacionenergetica td[bgcolor="#FFFFFF"] {
+    background-color: var(--e-surface) !important;
+    padding: 6px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+/* Clases base para recortar correctamente la imagen de fondo (sprites) */
+.eficienciaA, .eficienciaB, .eficienciaC, .eficienciaD, .eficienciaE, .eficienciaF, .eficienciaG {
+    display: block;
+    margin: 0 auto;
+    width: 190px;   /* Ancho estándar aproximado para estas tiras de eficiencia */
+    height: 28px;   /* Alto aproximado para que coincida con el salto de línea de ~34px */
+}
+
+/* Opcional: Estilo por si existe un indicador o flecha de la eficiencia actual */
+.flechaEficiencia {
+    width: 0;
+    height: 0;
+    /* Reducimos los bordes transparentes para hacerla más delgada y afilada */
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    
+    /* Alargamos el borde izquierdo a 12px para que sea más puntiaguda */
+    /* Usamos el color azul marino de tu paleta (--f-navy) o un código directo */
+    border-left: 12px solid var(--f-navy, #1B2A4A); 
+    
+    display: inline-block;
+    vertical-align: middle; /* Ayuda a que se alinee mejor con el texto o contenedor */
+    margin: 0 auto;
+    
+    /* Efecto opcional: una sombra muy suave para darle un toque premium */
+    filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.15));
+}

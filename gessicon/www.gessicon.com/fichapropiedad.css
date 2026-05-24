@@ -1,0 +1,801 @@
+/* =====================================================
+   MODULO-FICHAPROPIEDAD-1.CSS — Gessicon Inmobiliaria
+   Coherente con cabecera.css + estilo.css
+   Paleta: naranja #E65B0B · negro #111 · blanco · azul marino #1B2A4A
+   ===================================================== */
+
+:root {
+  --f-orange:      #E65B0B;
+  --f-orange-dark: #C04A00;
+  --f-orange-glow: rgba(230, 91, 11, 0.18);
+  --f-navy:        #1B2A4A;
+  --f-navy-light:  #2C3E6B;
+  --f-black:       #111111;
+  --f-white:       #ffffff;
+  --f-off:         #ffffff;
+  --f-off2:        #ffffff;
+  --f-border:      #e4dcdc;
+  --f-text:        #111111;
+  --f-muted:       #777777;
+  --f-radius:      10px;
+  --f-radius-sm:   6px;
+  --f-shadow:      0 2px 16px rgba(0,0,0,0.07);
+  --f-shadow-md:   0 6px 28px rgba(0,0,0,0.11);
+  --f-shadow-lg:   0 12px 48px rgba(0,0,0,0.16);
+}
+
+/* =====================================================
+   CONTENEDOR PRINCIPAL
+   ===================================================== */
+#modulo-fichapropiedad {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  background: var(--f-off);
+  color: var(--f-text);
+}
+
+/* =====================================================
+   BLOQUE TÍTULOS
+   ===================================================== */
+#modulo-fichapropiedad #fichapropiedad-titulos {
+  background: var(--f-white);
+  border-bottom: 3px solid var(--f-orange);
+  width: 100%;
+  margin: 0 auto;
+  padding: 28px 5%;
+  box-sizing: border-box;
+  box-shadow: var(--f-shadow);
+}
+
+/* Título principal */
+#modulo-fichapropiedad #fichapropiedad-titulos h1 {
+  color: var(--f-navy) !important;
+  font-weight: 800 !important;
+  font-size: 28px !important;
+  line-height: 1.2em !important;
+  margin: 0 0 16px 0 !important;
+  letter-spacing: -.01em;
+}
+
+.fichapropiedad-tituloprincipal {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+
+
+
+/* =====================================================
+   BLOQUE PRECIO
+   ===================================================== */
+.fichapropiedad-bloqueprecio {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 12px;
+  margin-top: 12px;
+  flex-wrap: wrap;
+}
+
+.fichapropiedad-bloqueprecio .fichapropiedad-precio {
+  font-size: 28px;
+  font-weight: 800;
+  padding: 10px 20px;
+  background: linear-gradient(135deg, var(--f-orange), var(--f-orange-dark));
+  color: #000000 !important;
+  border-radius: var(--f-radius);
+  box-shadow: 0 4px 18px var(--f-orange-glow);
+  letter-spacing: -.01em;
+}
+
+.fichapropiedad-bloqueprecio .fichapropiedad-proponerprecio {
+  position: relative;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 700;
+  text-align: center;
+  cursor: pointer;
+  background: var(--f-navy);
+  padding: 10px 18px;
+  border-radius: var(--f-radius);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: background .2s;
+}
+
+.fichapropiedad-bloqueprecio .fichapropiedad-proponerprecio:hover {
+  background: var(--f-navy-light);
+}
+
+.fichapropiedad-bloqueprecio .fichapropiedad-proponerprecio::before {
+  display: none; /* Quitamos el triángulo feo */
+}
+
+/* Precio rebajado */
+#modulo-fichapropiedad .rebajado {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 8px;
+  font-size: 14px;
+  padding: 6px 16px;
+  background: #FFF3E0;
+  color: var(--f-orange-dark);
+  border-radius: 20px;
+  border: 1px solid rgba(230,91,11,.2);
+  font-weight: 700;
+  margin-left: auto;
+}
+
+#modulo-fichapropiedad .rebajado span {
+  text-decoration: line-through;
+  font-weight: 400;
+  color: var(--f-muted);
+}
+
+.fichapropiedad-titulosecundario .fichapropiedad-impuestos-no-incluidos {
+  font-weight: 600;
+  text-align: right;
+  margin-top: 6px;
+  color: var(--f-muted);
+  font-size: 12px;
+}
+
+/* =====================================================
+   VISOR DE FOTOS
+   ===================================================== */
+#modulo-fichapropiedad #fichapropiedad-bloquevisor {
+  width: 70%;
+  margin: 24px auto 16px;
+  border-radius: var(--f-radius);
+  overflow: hidden;
+  box-shadow: var(--f-shadow-md);
+}
+
+#modulo-fichapropiedad #fichapropiedad-bloquevisor .bloqueVisorIndividual {
+  width: 100%;
+  height: auto !important;
+  position: relative;
+  background-color: var(--f-off2);
+  padding: 0;
+  box-sizing: border-box;
+  text-align: center;
+  border-radius: var(--f-radius);
+  overflow: hidden;
+}
+
+/* Miniaturas */
+.visorficha-miniaturas ul {
+  border: none !important;
+  padding: 8px 0 !important;
+  margin: 8px auto !important;
+  gap: 6px;
+  display: flex !important;
+  justify-content: flex-start !important;
+  overflow-x: auto !important;
+}
+
+.visorficha-miniaturas li {
+  height: 64px !important;
+  min-width: 88px !important;
+  border-radius: var(--f-radius-sm) !important;
+  overflow: hidden !important;
+  border: 2px solid transparent !important;
+  transition: border-color .2s !important;
+  cursor: pointer !important;
+}
+
+.visorficha-miniaturas li:hover {
+  border-color: var(--f-orange) !important;
+}
+
+/* Botón fullscreen */
+.visorficha-fullscreen {
+  background: rgba(255,255,255,.92) !important;
+  border: 2px solid var(--f-orange) !important;
+  border-radius: var(--f-radius-sm) !important;
+  box-shadow: var(--f-shadow) !important;
+  width: 36px !important;
+  height: 36px !important;
+  transition: background .2s !important;
+}
+
+.visorficha-fullscreen:hover {
+  background: var(--f-orange) !important;
+}
+
+/* =====================================================
+   MENÚ DE VISORES (fotos / tour / video…)
+   ===================================================== */
+#modulo-fichapropiedad #fichapropiedad-menuVisores ul {
+  display: flex;
+  justify-content: flex-start;
+  gap: 4px;
+  padding: 0;
+  margin: 0 0 0 0;
+  list-style: none;
+}
+
+#modulo-fichapropiedad #fichapropiedad-menuVisores ul li {
+  background: var(--f-off2);
+  color: var(--f-navy);
+  display: inline-block;
+  width: auto;
+  text-align: center;
+  padding: 8px 16px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  border-radius: var(--f-radius) var(--f-radius) 0 0;
+  border: 1.5px solid var(--f-border);
+  border-bottom: none;
+  transition: background .2s, color .2s;
+  margin: 0 2px;
+}
+
+#modulo-fichapropiedad #fichapropiedad-menuVisores ul li.activo,
+#modulo-fichapropiedad #fichapropiedad-menuVisores ul li:hover {
+  background: var(--f-orange);
+  color: #fff;
+  border-color: var(--f-orange);
+}
+
+/* =====================================================
+   DESCRIPCIÓN
+   ===================================================== */
+#modulo-fichapropiedad #fichapropiedad-bloquedescripcion {
+  color: var(--f-muted);
+  width: 100%;
+  margin: 0;
+  padding: 20px 5%;
+  box-sizing: border-box;
+  background: var(--f-white);
+  border-bottom: 1px solid var(--f-border);
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+/* =====================================================
+   CARACTERÍSTICAS DETALLADAS
+   ===================================================== */
+#modulo-fichapropiedad #fichapropiedad-bloquecaracteristicas {
+  color: var(--f-text);
+  width: 100%;
+  margin: 0;
+  padding: 28px 5%;
+  box-sizing: border-box;
+  background: var(--f-white);
+  position: relative;
+}
+
+#modulo-fichapropiedad #fichapropiedad-bloquecaracteristicas h2,
+#modulo-fichapropiedad h2 {
+  color: var(--f-navy) !important;
+  font-size: 20px !important;
+  font-weight: 800 !important;
+  margin: 0 0 20px 0 !important;
+  padding-bottom: 10px !important;
+  border-bottom: 2px solid var(--f-orange) !important;
+  display: inline-block !important;
+}
+
+.fichapropiedad-listados {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+/* Lista de datos (izquierda) */
+ul.fichapropiedad-listadatos {
+  box-sizing: border-box;
+  padding: 0;
+  width: 60%;
+  min-width: 280px;
+  flex: 1;
+}
+
+ul.fichapropiedad-listadatos li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 12px;
+  margin: 3px 0;
+  background: var(--f-off);
+  border-radius: var(--f-radius-sm);
+  border-left: 3px solid transparent;
+  transition: border-color .15s;
+}
+
+ul.fichapropiedad-listadatos li:hover {
+  border-left-color: var(--f-orange);
+}
+
+ul.fichapropiedad-listadatos li span {
+  width: auto;
+  display: inline;
+  font-size: 13px;
+  line-height: 1.5em;
+  padding: 0;
+}
+
+ul.fichapropiedad-listadatos li span.caracteristica {
+  font-weight: 700;
+  color: var(--f-navy);
+  flex: 1;
+}
+
+ul.fichapropiedad-listadatos li span.valor {
+  color: var(--f-muted);
+  text-align: right;
+  flex: 1;
+}
+
+/* Lista de calidades (derecha, iconos check) */
+div.fichapropiedad-listaderecha {
+  width: 38%;
+  min-width: 200px;
+  flex: 1;
+}
+
+ul.fichapropiedad-listacalidades {
+  padding: 0;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  align-content: flex-start;
+  gap: 6px;
+}
+
+ul.fichapropiedad-listacalidades li {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--f-off);
+  border: 1px solid var(--f-border);
+  border-radius: 20px;
+  padding: 4px 12px;
+  width: auto;
+  margin: 0;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--f-navy);
+  transition: background .15s, border-color .15s;
+}
+
+ul.fichapropiedad-listacalidades li:hover {
+  background: rgba(230,91,11,.08);
+  border-color: var(--f-orange);
+}
+
+ul.fichapropiedad-listacalidades li i {
+  font-size: 14px !important;
+  color: var(--f-orange) !important;
+  width: auto !important;
+  height: auto !important;
+  float: none !important;
+  margin: 0 !important;
+}
+
+ul.fichapropiedad-listacalidades li b.etiqueta {
+  font-weight: 600;
+}
+
+/* Reemplaza las imágenes por CSS puro */
+.eficienciaA, .eficienciaB, .eficienciaC, .eficienciaD,
+.eficienciaE, .eficienciaF, .eficienciaG {
+  position: relative;
+  height: 32px;
+  line-height: 32px;
+  font-weight: bold;
+  font-size: 16px;
+  color: white;
+  padding-left: 12px;
+  margin: 2px 0;
+  clip-path: polygon(0 0, calc(100% - 12px) 0, 100% 50%, calc(100% - 12px) 100%, 0 100%);
+  background: none !important; /* anula el background de Inmovilla */
+  width: 90%;
+}
+
+.eficienciaA { background-color: #1a9e2e !important; width: 55%; }
+.eficienciaA::before { content: 'A  más eficiente'; }
+
+.eficienciaB { background-color: #4cb82e !important; width: 62%; }
+.eficienciaB::before { content: 'B'; }
+
+.eficienciaC { background-color: #a8cc2e !important; width: 69%; }
+.eficienciaC::before { content: 'C'; }
+
+.eficienciaD { background-color: #f0e02e !important; color: #ffffff !important; width: 76%; }
+.eficienciaD::before { content: 'D'; }
+
+.eficienciaE { background-color: #f0a030 !important; width: 83%; }
+.eficienciaE::before { content: 'E'; }
+
+.eficienciaF { background-color: #e05a20 !important; width: 90%; }
+.eficienciaF::before { content: 'F'; }
+
+.eficienciaG { background-color: #cc1e1e !important; width: 97%; }
+.eficienciaG::before { content: 'G  menos eficiente'; }
+
+
+/* =====================================================
+   MAPA
+   ===================================================== */
+#fichapropiedad-bloquemapa {
+  color: var(--f-text);
+  width: 100%;
+  overflow: hidden;
+  padding: 28px 5%;
+  box-sizing: border-box;
+  background: var(--f-off);
+}
+
+#fichapropiedad-bloquemapa h2 { color: var(--f-navy) !important; }
+
+#fichapropiedad-bloquemapa iframe {
+  width: 100%;
+  height: 380px;
+  border-radius: var(--f-radius);
+  border: 1px solid var(--f-border) !important;
+  box-shadow: var(--f-shadow);
+}
+
+
+/* =====================================================
+   BARRA GRIS DE NAVEGACIÓN
+   ===================================================== */
+#modulo-fichapropiedad .barragris {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 24px;
+  padding: 12px 5%;
+  background: var(--f-white);
+  border-bottom: 1px solid var(--f-border);
+  box-shadow: var(--f-shadow);
+}
+
+#modulo-fichapropiedad .barragris span {
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--f-navy);
+  transition: color .2s;
+}
+
+#modulo-fichapropiedad .barragris span:hover {
+  color: var(--f-orange);
+  text-decoration: underline;
+  text-shadow: none;
+}
+
+/* =====================================================
+   SIMULADOR HIPOTECA
+   ===================================================== */
+#modulo-fichapropiedad #fichapropiedad-bloquesimuladorhipoteca {
+  color: var(--f-text);
+  width: 100%;
+  margin: 0;
+  padding: 36px 5% 40px;
+  box-sizing: border-box;
+  background: var(--f-off);
+  /* Quitamos la imagen de fondo intrusiva */
+  background-image: none !important;
+}
+
+#fichapropiedad-bloquesimuladorhipoteca h2 {
+  color: var(--f-navy) !important;
+  text-shadow: none !important;
+}
+
+/* =====================================================
+   DOCUMENTOS
+   ===================================================== */
+#fichapropiedad-documentos {
+  max-width: 600px;
+  margin: 24px auto;
+}
+
+#fichapropiedad-documentos .tabla {
+  border: 1px solid var(--f-border) !important;
+  border-radius: var(--f-radius) !important;
+  overflow: hidden !important;
+  padding: 12px !important;
+}
+
+#fichapropiedad-documentos .tabla__fila {
+  padding: 8px 12px;
+  border-bottom: 1px solid var(--f-off2);
+}
+
+/* =====================================================
+   PROPIEDADES SIMILARES
+   ===================================================== */
+#modulo-fichapropiedad #fichapropiedad-bloquesimilares {
+  width: 100%;
+  margin: 0;
+  padding: 36px 5%;
+  box-sizing: border-box;
+  background: var(--f-white);
+}
+
+#modulo-fichapropiedad #fichapropiedad-bloquesimilares h2 {
+  color: var(--f-navy) !important;
+}
+
+#modulo-fichapropiedad #fichapropiedad-bloquesimilares > div.contenidoSimilares {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  min-height: 200px;
+  padding: 0;
+}
+
+.similares-ficha {
+  width: calc(25% - 16px);
+  min-height: auto;
+  background: var(--f-white);
+  border: 1px solid var(--f-border);
+  border-radius: var(--f-radius);
+  overflow: hidden;
+  box-shadow: var(--f-shadow);
+  transition: box-shadow .25s, transform .25s;
+}
+
+.similares-ficha:hover {
+  box-shadow: var(--f-shadow-lg);
+  transform: translateY(-4px);
+}
+
+.similares-ficha .similares-ficha-bloque1 {
+  box-sizing: border-box;
+  position: relative;
+  width: 100%;
+  height: 180px;
+  overflow: hidden;
+}
+
+.similares-ficha .similares-ficha-tituloprecio {
+  box-sizing: border-box;
+  position: absolute;
+  top: 0; left: 0;
+  width: auto;
+  padding: 5px 12px;
+  background: linear-gradient(135deg, var(--f-orange), var(--f-orange-dark));
+  color: #fff !important;
+  font-size: 14px;
+  font-weight: 800;
+  border-radius: 0 0 var(--f-radius-sm) 0;
+  z-index: 3;
+}
+
+.similares-ficha .similares-ficha-bloque2 {
+  position: relative;
+  z-index: 3;
+  height: auto;
+  min-height: 120px;
+}
+
+.similares-ficha .similares-ficha-datos {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  padding: 12px;
+  font-size: 13px;
+  color: var(--f-navy);
+  font-weight: 600;
+}
+
+.similares-ficha .similares-ficha-pie hr {
+  width: 100%;
+  border: 1px solid var(--f-border) !important;
+  margin: 8px 0 !important;
+}
+
+.similares-ficha .similares-ficha-masinfo {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 800;
+  color: #fff !important;
+  background: var(--f-navy) !important;
+  padding: 4px 12px;
+  border-radius: 20px;
+  transition: background .2s;
+  text-decoration: none !important;
+}
+
+.similares-ficha .similares-ficha-masinfo:hover {
+  background: var(--f-orange) !important;
+}
+
+/* Precio rebajado en similares */
+.similares-ficha .similares-ficha-preciorebajado {
+  background: #FFF3E0;
+  color: var(--f-orange-dark);
+  border-radius: var(--f-radius-sm);
+  padding: 3px 10px;
+  font-size: 12px;
+  font-weight: 700;
+  border: 1px solid rgba(230,91,11,.2);
+  position: relative;
+  top: 0; left: 0;
+}
+
+.similares-ficha .similares-ficha-precioanterior {
+  text-decoration: line-through;
+  color: var(--f-muted);
+}
+
+/* Flechas en similares */
+.similares-ficha .flechaprev { left: 0; opacity: 0; transition: all .3s ease; }
+.similares-ficha .flechanext { right: 0; opacity: 0; transition: all .3s ease; }
+.similares-ficha:hover .flechaprev { left: 8px; opacity: 1; }
+.similares-ficha:hover .flechanext { right: 8px; opacity: 1; }
+
+/* Overlay estado gestionadas */
+.similares-ficha .similares-estadogestionadas span {
+  color: var(--f-orange) !important;
+  font: 50px 'Stardos Stencil' !important;
+}
+
+.similares-ficha .similares-estadogestionadas svg path {
+  fill: var(--f-orange) !important;
+}
+
+/* =====================================================
+   MODAL PROPONER PRECIO
+   ===================================================== */
+.formProponerPrecio,
+.formuEnviarPropEmail {
+  padding: 8px 4px;
+}
+
+.formProponerPrecio .bloqueProponerInput,
+.formuEnviarPropEmail .bloqueEnviarPropInput {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin: 8px 0;
+}
+
+.formProponerPrecio .bloqueProponerInput span,
+.formuEnviarPropEmail .bloqueEnviarPropInput span {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--f-navy);
+  text-transform: uppercase;
+  letter-spacing: .04em;
+}
+
+.formProponerPrecio .bloqueProponerInput input,
+.formuEnviarPropEmail .bloqueEnviarPropInput input,
+.formProponerPrecio .bloqueProponerTextarea textarea,
+.formuEnviarPropEmail .bloqueEnviarPropTextarea textarea {
+  border: 1.5px solid var(--f-border) !important;
+  border-radius: var(--f-radius-sm) !important;
+  padding: 8px 12px !important;
+  font-size: 13px !important;
+  color: var(--f-text) !important;
+  background: var(--f-off) !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
+  transition: border-color .2s !important;
+}
+
+.formProponerPrecio .bloqueProponerInput input:focus,
+.formuEnviarPropEmail .bloqueEnviarPropInput input:focus,
+.formProponerPrecio .bloqueProponerTextarea textarea:focus,
+.formuEnviarPropEmail .bloqueEnviarPropTextarea textarea:focus {
+  border-color: var(--f-orange) !important;
+  outline: none !important;
+}
+
+.formProponerPrecio > *,
+.formuEnviarPropEmail > * {
+  width: 100% !important;
+}
+
+.formProponerPrecio .bloqueProponerCheckbox,
+.formuEnviarPropEmail .bloqueEnvairPropCheckbox {
+  width: 100% !important;
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  font-size: 11px;
+  color: var(--f-muted);
+}
+
+#bloqueProponerButton button.enviarProponerPrecio,
+#bloqueEnviarPropButton button.enviarEnviarPropPrecio {
+  width: 100% !important;
+  background: linear-gradient(135deg, var(--f-orange), var(--f-orange-dark)) !important;
+  color: #fff !important;
+  border: none !important;
+  border-radius: var(--f-radius-sm) !important;
+  padding: 10px 22px !important;
+  font-weight: 800 !important;
+  font-size: 14px !important;
+  cursor: pointer !important;
+  margin: 12px 0 8px !important;
+  transition: opacity .2s !important;
+}
+
+#bloqueProponerButton button.enviarProponerPrecio:hover,
+#bloqueEnviarPropButton button.enviarEnviarPropPrecio:hover { opacity: .88 !important; }
+
+#bloqueProponerButton div.resultadoProponerPrecio.ok,
+#bloqueEnviarPropButton div.resultadoEnviarProp.ok {
+  background-color: #2e7d32 !important;
+  border-radius: var(--f-radius-sm);
+}
+
+#bloqueProponerButton div.resultadoProponerPrecio.ko,
+#bloqueEnviarPropButton div.resultadoEnviarProp.ko {
+  background-color: #c62828 !important;
+  border-radius: var(--f-radius-sm);
+}
+
+/* =====================================================
+   RESPONSIVE
+   ===================================================== */
+@media (max-width: 1600px) {
+  #modulo-fichapropiedad #fichapropiedad-bloquevisor { width: 80%; }
+  .visorficha-miniaturas li { height: 56px !important; }
+}
+
+@media (max-width: 1200px) {
+  #fichapropiedad-bloquesimilares .similares-ficha { width: calc(33% - 14px); }
+}
+
+@media (max-width: 1000px) {
+  #fichapropiedad-bloquesimilares .similares-ficha { width: calc(50% - 10px); }
+  #modulo-fichapropiedad #fichapropiedad-bloquevisor .bloqueVisorIndividual { min-height: auto !important; }
+}
+
+@media (max-width: 900px) {
+  #modulo-fichapropiedad #fichapropiedad-bloquevisor { width: 100%; }
+  ul.fichapropiedad-listadatos { width: 100%; }
+  div.fichapropiedad-listaderecha { width: 100%; }
+  .fichapropiedad-listados { flex-direction: column; }
+  #fichapropiedad-bloquesimuladorhipoteca .cajaCalculadora { padding: 18px 16px; }
+}
+
+@media (max-width: 800px) {
+  .fichapropiedad-tituloprincipal { flex-direction: column-reverse; align-items: flex-end; }
+  #modulo-fichapropiedad #fichapropiedad-titulos h1 { width: 100% !important; margin-right: 0 !important; }
+  .fichapropiedad-datosagencia { flex-direction: column; font-size: 14px; }
+  .fichapropiedad-datosagencia .datosagencia-telf { margin-left: 0; margin-top: 8px; }
+  .fichapropiedad-bloqueprecio .fichapropiedad-proponerprecio { font-size: 13px; padding: 8px 14px; }
+  .fichapropiedad-bloqueprecio .fichapropiedad-precio { font-size: 22px; }
+}
+
+@media (max-width: 650px) {
+  #fichapropiedad-bloquecontactanos .cajaForm { flex-direction: column; }
+  #fichapropiedad-bloquecontactanos .cajaEnviar { width: 100%; }
+  #fichapropiedad-bloquecontactanos .comentario textarea { width: 100%; }
+}
+
+@media (max-width: 600px) {
+  #fichapropiedad-bloquesimilares .similares-ficha { width: 100%; }
+  .formProponerPrecio > *, .formuEnviarPropEmail > * { width: 100% !important; }
+  ul.fichapropiedad-caracteristicastitulo li { font-size: 14px; padding: 5px 12px 5px 32px; }
+}
+
+@media (max-width: 480px) {
+  #modulo-fichapropiedad h2 { font-size: 18px !important; }
+  ul.fichapropiedad-listadatos li span { font-size: 12px; }
+  #modulo-fichapropiedad #fichapropiedad-titulos { padding: 18px 4%; }
+  #modulo-fichapropiedad #fichapropiedad-bloquecaracteristicas,
+  #fichapropiedad-bloquemapa { padding: 20px 4%; }
+  .fichapropiedad-bloqueprecio .fichapropiedad-precio { font-size: 18px; padding: 8px 14px; }
+  #modulo-fichapropiedad .rebajado { font-size: 13px; padding: 4px 12px; }
+}

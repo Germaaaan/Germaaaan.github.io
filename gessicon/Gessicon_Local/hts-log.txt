@@ -1,0 +1,66 @@
+HTTrack3.49-2+htsswf+htsjava launched on Wed, 06 May 2026 18:22:12 at / +*.css +*.js -ad.doubleclick.net/* -mime:application/foobar +*.gif +*.jpg +*.jpeg +*.png +*.tif +*.bmp +*.zip +*.tar +*.tgz +*.gz +*.rar +*.z +*.exe +*.mov +*.mpg +*.mpeg +*.avi +*.asf +*.mp3 +*.mp2 +*.rm +*.wav +*.vob +*.qt +*.vid +*.ac3 +*.wma +*.wmv
+
+(winhttrack -qwr3%e0C2%Ps2u1%s%uN0%I0p3DaK0H0%kf2A25000%f#f -F "Mozilla/4.5 (compatible; HTTrack 3.0x; Windows 98)" -%F "<!-- Mirrored from %s%s by HTTrack Website Copier/3.x [XR&CO'2014], %s -->" -%l "en, *" https://www.gessicon.com/ -O1 "D:\GESSICON WEB\Gessicon_Local" +*.css +*.js -ad.doubleclick.net/* -mime:application/foobar +*.gif +*.jpg +*.jpeg +*.png +*.tif +*.bmp +*.zip +*.tar +*.tgz +*.gz +*.rar +*.z +*.exe +*.mov +*.mpg +*.mpeg +*.avi +*.asf +*.mp3 +*.mp2 +*.rm +*.wav +*.vob +*.qt +*.vid +*.ac3 +*.wma +*.wmv )
+
+
+
+Information, Warnings and Errors reported for this mirror:
+
+note:	the hts-log.txt fi, may contain sensitive information,
+
+	such as username/passwobsites mirrored in this project
+
+	do not share these files/folders if you waremain private
+
+
+
+18:24:52	Warning: 	Link /alertas/ not scanned (follow robots meta tag)
+
+18:24:52	Warning: 	Link /publica-tu-inmueble/ not scanned (follow robots meta tag)
+
+18:26:30	Warning: 	Link /alertas.php not scanned (follow robots meta tag)
+
+18:26:30	Error: 	"Not Fo://www.gessicon.com/window.location.href (from https://www.gessicon.com/)
+
+18:26:30	Error: 	"Not Fo://www.gessicon.com/noticia/ (from https://www.gessicon.com/)
+
+18:26:30	Error: 	"Not Fo://www.gessicon.com/promocion/ (from https://www.gessicon.com/)
+
+18:26:33	Warning: 	Link /imprimirfichapropiedad.php?voyimprimir=1&datoofe=12341515.8569 not scanned (follow robots meta tag)
+
+18:26:33	Warning: 	Link https://www.gessicon.com/imprimirfichapropiedad.php?voyimprimir=1&datoofe=12341101.8569 not scanned (follow robots meta tag)
+
+18:26:33	Warning: 	Link https://www.gessicon.com/imprimirfichapropiedad.php?voyimprimir=1&datoofe=12340691.8569 not scanned (follow robots meta tag)
+
+18:26:33	Warning: 	Link https://www.gessicon.com/imprimirfichapropiedad.php?voyimprimir=1&datoofe=21208505.8569 not scanned (follow robots meta tag)
+
+18:26:33	Warning: 	Link https://www.gessicon.com/imprimirfichapropiedad.php?voyimprimir=1&datoofe=28837866.8569 not scanned (follow robots meta tag)
+
+18:26:34	Warning: 	Link https://www.gessicon.com/imprimirfichapropiedad.php?voyimprimir=1&datoofe=15970004.8569 not scanned (follow robots meta tag)
+
+18:26:34	Warning: 	Link https://www.gessicon.com/imprimirfichapropiedad.php?voyimprimir=1&datoofe=23534390.8569 not scanned (follow robots meta tag)
+
+18:26:34	Warning: 	Link https://www.gessicon.com/imprimirfichapropiedad.php?voyimprimir=1&datoofe=12341498.8569 not scanned (follow robots meta tag)
+
+18:26:34	Warning: 	Link https://www.gessicon.com/imprimirfichapropiedad.php?voyimprimir=1&datoofe=21848847.8569 not scanned (follow robots meta tag)
+
+18:26:34	Warning: 	Link https://www.gessicon.com/imprimirfichapropiedad.php?voyimprimir=1&datoofe=27575322.8569 not scanned (follow robots meta tag)
+
+18:26:34	Warning: 	Link https://www.gessicon.com/imprimirfichapropiedad.php?voyimprimir=1&datoofe=27609111.8569 not scanned (follow robots meta tag)
+
+18:26:34	Warning: 	Link https://www.gessicon.com/imprimirfichapropiedad.php?voyimprimir=1&datoofe=12340765.8569 not scanned (follow robots meta tag)
+
+18:26:34	Warning: 	Link https://www.gessicon.com/imprimirfichapropiedad.php?voyimprimir=1&datoofe=26770541.8569 not scanned (follow robots meta tag)
+
+18:26:34	Warning: 	Link https://www.gessicon.com/imprimirfichapropiedad.php?voyimprimir=1&datoofe=27761236.8569 not scanned (follow robots meta tag)
+
+18:26:34	Warning: 	Link https://www.gessicon.com/imprimirfichapropiedad.php?voyimprimir=1&datoofe=12342018.8569 not scanned (follow robots meta tag)
+
+18:26:34	Warning: 	Link https://www.gessicon.com/imprimirfichapropiedad.php?voyimprimir=1&datoofe=12341144.8569 not scanned (follow robots meta tag)
+
+
+
+HTTrack Website Copier/3.49-2 mirror complete in 4 minutes 22 seconds : 531 links scanned, 527 files written (41747274 bytes overall) [39058338 bytes received at 149077 bytes/sec], 11185068 bytes transferred using HTTP compression in 153 files, ratio 17%, 1.7 requests per connection
+
+(3 errors, 19 warnings, 0 messages)
+

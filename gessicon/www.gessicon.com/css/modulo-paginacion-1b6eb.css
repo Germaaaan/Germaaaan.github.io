@@ -1,0 +1,328 @@
+#modulo-paginacion {
+    flex-direction: column;
+    margin-bottom: 60px;
+    margin-top: 10px;
+}
+#paginacion-titulo {
+    flex-direction: column;
+    background-color: transparent !important;
+    padding: 0px;
+    width: 100%;
+}
+#paginacion-titulo h1 {
+    font-size: 36px;
+    line-height: 42.19px;
+    text-align: center;
+    margin-bottom: 40px;
+    margin-right: 0px;
+}
+
+#paginacion-titulo span {
+    font-size: 14px;
+    line-height: 16px;
+    margin-bottom: 0px;
+    display: flex;
+    align-items: center;
+}
+
+#modulo-paginacion {
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+/* Ajustar titulo, ancho modulo */
+#paginacion-cabecera {
+    position: relative;
+    max-width: 1200px;
+    margin: auto;
+    width: 90vw !important;
+}
+
+#titulo-filtrar-1 {
+    display: none;
+}
+
+#paginacion-cabecera menu {
+    display: flex;
+    justify-content: flex-end;
+    margin: 0;
+    gap: 10px;
+    color: var(--colorTextos);
+}
+#paginacion-botonesFiltros {
+    max-width: 1200px;
+    width: 90vw !important;
+    margin: 16px auto 0px;
+    width: 100%;
+    font-size: 16px;
+    position: relative;
+    gap: 8px 16px;
+}
+#paginacion-pie {
+    background-color: var(--background2);
+    width: max-content;
+    padding: 8px;
+    border-radius: 12px;
+    margin: 0px auto 40px;
+    max-width: 90vw;
+}
+
+#paginacion-botonesFiltros::before {
+    content: attr(lang-data);
+    color: black;
+    margin-right: 16px
+}
+#paginacion-contenido, .contenidoSimilares {
+    max-width: 1216px;
+    margin: 48px auto 64px;
+    padding: 0px !important;
+    gap: 40px 16px;
+    display: grid !important;
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 16rem), 1fr)) !important;
+    width: 90vw;
+}
+article.paginacion-ficha, article.similares-ficha {
+    margin: 15px !important;
+    height: 304px;
+    min-height: 0px !important;
+    width: 100% !important;
+}
+#paginacion-contenido .marca {
+    position: absolute;
+    z-index: 5;
+    top: -8px;
+    right: -8px;
+    width: 33px;
+    height: 33px;
+    font-size:25px;
+    display: flex;
+    align-items: center;
+    background: white;
+    border-radius: 50%;
+    margin: 0px;
+    padding: 2px;
+    box-shadow: 0px 0px 4px 1px rgba(0,0,0,0.22);
+    -webkit-box-shadow: 0px 0px 4px 1px rgba(0,0,0,0.22);
+    -moz-box-shadow: 0px 0px 4px 1px rgba(0,0,0,0.22);
+}
+
+#paginacion-contenido .marca i{
+    margin: 0px;
+    height: 33px;
+    width: 33px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+#paginacion-contenido .marca.vista {
+    color:#27ae60;
+}
+#paginacion-contenido .marca.favorita {
+    color:#f39c12;
+}
+#paginacion-contenido .marca.descartada {
+    color:#c0392b;
+}
+#paginacion-contenido .marca.vista i,#paginacion-contenido .marca.favorita i {
+    margin-right: 0.5px;
+}
+
+#paginacion-contenido .marca.favorita i {
+    margin-bottom: 2px;
+}
+
+#paginacion-cabecera menu a {
+    display: inline-block;
+    margin: 0 5px;
+    padding: 10px 100px 5px 100px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    background-color: #707070;
+    transition: all .3s ease;
+    font-size: 20px;
+    line-height: 20px;
+}
+
+#paginacion-titulo {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    font-size: 24px;
+    background-color: #ebebeb;
+    color: var(--colorTextos2);
+    line-height: 1.4em;
+}
+
+#paginacion-titulo > * {
+    margin-bottom: 15px;
+}
+
+#paginacion-titulo h4 {
+    text-transform: uppercase;
+}
+
+#paginacion-contenido {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    min-height: 300px;
+    padding: 20px 2.5%;
+}
+
+#paginacion-botonesFiltros{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    max-width: 1200px;
+    margin: 16px auto;
+    width: 100%;
+    font-size: 16px;
+    position: relative;
+    gap: 8px 16px;
+}
+
+#paginacion-botonesFiltros a div {
+    display: flex;
+    align-items: flex-end;
+}
+
+#paginacion-botonesFiltros a {
+    background-position: center left;
+    background-repeat: no-repeat;
+    background-size: contain;
+    color: var(--colorTextos2);
+    font-weight: bold;
+    font-size: 16px;
+    font-family: Comfortaa;
+}
+
+#paginacion-botonesFiltros a:hover {
+    filter: brightness(120%);
+}
+
+/*#paginacion-botonesFiltros a.vistas {background-image: url(../img/ficha/1/vistas.png)}*/
+#paginacion-botonesFiltros a.vistas i{
+    color:#27ae60;
+    font-size:25px;
+}
+#paginacion-botonesFiltros a.descartadas i{
+    color:#c0392b;
+    font-size:25px;
+}
+#paginacion-botonesFiltros a.favoritas i{
+    color:#f39c12;
+    font-size:25px;
+}
+/*
+#paginacion-botonesFiltros a.descartadas {background-image: url(../img/ficha/1/descartadas.png)}
+#paginacion-botonesFiltros a.favoritas {background-image: url(../img/ficha/1/fav.png)}
+*/
+/*.fa-eye::before{
+    background-image: url("../../img/plantillascss/plantillacss1/Vista.svg");
+}
+#modulo-paginacion .fa-star::before, #modulo-fichapropiedad .fa-star::before {
+    background-image: url("../../img/plantillascss/plantillacss1/Favorita.svg");
+}
+.fa-minus-circle::before {
+    background-image: url("../../img/plantillascss/plantillacss1/Descartada.svg");
+}*/
+#aviso_tour_paginacion {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 35px;
+    right: 10px;
+}
+
+
+
+
+@media (max-width: 1400px)
+{
+
+    #paginacion-contenido {
+        padding: 20px;
+    }
+
+}
+
+
+@media (max-width: 1000px)
+{
+    #paginacion-titulo-sections {
+        flex-direction: column;
+    }
+
+    #paginacion-titulo-sections span {
+        order: 1;
+    }
+
+    #paginacion-botonesFiltros a {
+        width: 100%;
+    }
+
+    #paginacion-titulo > * {
+        text-align: center;
+    }
+
+    #paginacion-titulo > h1 {
+        margin-right: 20px;
+    }
+
+
+}
+
+@media (max-width: 700px)
+{
+    #paginacion-pie{
+        width: 100%;
+    }
+
+    .paginador .paginador-numpaginas {
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-bottom: 0;
+    }
+    .paginador .paginador-controlesOpciones{
+        width: 100%;
+    }
+    #paginacion-numElmenetosPagina{
+        width:100%;
+    }
+    .custom-select{
+        height: 33px;
+        width: 60%;
+    }
+
+    #paginacion-cabecera menu {
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 600px) {
+
+    #paginacion-titulo {
+        justify-content: center;
+    }
+
+}
+@media (max-width: 480px) {
+    #paginacion-cabecera menu{
+        bottom: -175px;
+    }
+    #modulo-equipo-2 #equipo-paginacion-2{
+        bottom: -40px;
+    }
+    .paginador a {
+        margin: 5px 3px;
+    }
+    #paginacion-contenido{
+        margin-right: 35px;
+    }
+}
+
+
+
+
+

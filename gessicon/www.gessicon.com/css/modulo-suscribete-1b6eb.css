@@ -1,0 +1,119 @@
+#modulo-suscribete-1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 60px 30px;
+    box-sizing: border-box;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    position: relative;
+    overflow: hidden;
+    margin-top: 15px;
+    text-shadow: 1px 1px 1px #222;
+}
+
+#titulo-suscribete-1 {
+    display:none;
+}
+
+#modulo-suscribete-1 video {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0);
+    object-position: center center;
+    object-fit: cover;
+    width: 100%;
+    height: 250px;
+    z-index: 0;
+    -webkit-transform: translateZ(0)
+}
+
+#modulo-suscribete-1 .titulo {
+    font-size: 1.6em;
+    line-height: 1.2em;
+    font-style: italic;
+    margin-bottom: 40px;
+    z-index: 1;
+}
+
+#modulo-suscribete-1 .cajas {
+    width: 440px;
+    z-index: 1;
+}
+
+#modulo-suscribete-1 .cajas > div.opciones {
+    font-size: 1.1em;
+    padding: 8px 10px;
+    display: flex;
+    text-shadow: 1px 1px 1px #222;
+    flex-direction: column;
+}
+
+#modulo-suscribete-1 div.resultadoSuscribete {
+    display: none;
+    width: 100%;
+    border: 1px solid #A8A8A8;
+    color: white;
+    font-size: 1.5em;
+    font-weight: bold;
+    padding: 5px 0;
+    margin: 10px auto 20px;
+    border-radius: 4px;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+#modulo-suscribete-1 div.resultadoSuscribete.ok {background-color: rgb(81, 197, 60);}
+#modulo-suscribete-1 div.resultadoSuscribete.ko {background-color: rgb(197, 60, 65);}
+
+#modulo-suscribete-1 label {
+    cursor: pointer;
+}
+
+#modulo-suscribete-1 button.botonEnviar {
+    width: 100%;
+    border: 1px solid #f2f2f244;
+    background-color: var(--background1);
+    color: var(--color1);
+    font-size: 1.1em;
+    margin: 10px auto 20px;
+    border-radius: 4px;
+    text-align: center;
+    filter: brightness(120%);
+}
+
+#modulo-suscribete-1 button.botonEnviar:hover {
+    filter: brightness(140%);
+}
+
+#modulo-suscribete-1 button.botonEnviar.enviando {
+    background-image: url(../img/loading_fff.gif);
+    background-size: 20px;
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+}
+
+input#emailSuscripcion {
+    padding-left: 48px;
+    font-style: italic;
+    font-size: 1.2em;
+    color: #333;
+    width: 100%;
+    background-image: url(../img/suscribete/email.png);
+    background-position: 8px center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    border-radius: 5px;
+}
+
+@media (max-width: 600px) {
+    #modulo-suscribete-1 video {
+        width: auto;
+        min-height: 100%;
+    }
+
+    #modulo-suscribete-1 .cajas {
+        width: 90vw !important;
+        min-width: auto;
+    }
+}
