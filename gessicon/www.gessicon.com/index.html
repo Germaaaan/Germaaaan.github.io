@@ -2360,21 +2360,37 @@
 
 <div class="seccion-dual-personalizada">
 
-  <section id="modulo-suscribete-1" class="modulos-suscribete unset">
-    <div class="titulo">
-      <h1 id="titulo-suscribete-1">Subscribe</h1>
-      Suscríbete a nuestra lista de correos y serás el primero en recibir información sobre nuestras propiedades
+<section id="modulo-suscribete-1" class="modulos-suscribete unset" style="border: 1px solid #d8dfdf !important;">
+  <div class="titulo">
+    <h1 id="titulo-suscribete-1">Suscríbete</h1>
+    Suscríbete a nuestra lista de correos y serás el primero en recibir información sobre nuestras propiedades
+  </div>
+  
+  <form class="cajas" action="https://api.web3forms.com/submit" method="POST">
+    
+    <input type="hidden" name="access_key" value="a619dc9e-8214-4ade-9eb2-038cfa965e55">
+    
+    <input type="hidden" name="from_name" value="Web - Nueva Suscripción">
+    
+    <input id="emailSuscripcion" class="emailSuscripcion" type="email" name="email" placeholder="E-mail @" required>
+    
+    <button type="submit" class="botonEnviar accionEnviar">Enviar</button>
+    
+    <div class="resultadoSuscribete"></div>
+    
+    <div class="opciones">
+      <p>
+        <input id="checkPolitica" name="privacy_policy" type="checkbox" required> 
+        <label id="txtPoliticaSuscribete">Accept Privacy Policy</label>
+      </p>
+      
+      <p>
+        <input id="checkNewsletter" name="accept_newsletter" type="checkbox"> 
+        <label>Acepto recibir publicidad</label>
+      </p>
     </div>
-    <div class="cajas">
-      <input id="emailSuscripcion" class="emailSuscripcion" type="text" placeholder="E-mail @">
-      <button class="botonEnviar accionEnviar">Send</button>
-      <div class="resultadoSuscribete"></div>
-      <div class="opciones">
-        <p><input id="checkPolitica" type="checkbox"> <label id="txtPoliticaSuscribete">Accept Privacy Policy</label></p>
-        <p><input id="checkNewsletter" type="checkbox"> <label>Accept to receive advertisement</label></p>
-      </div>
-    </div>
-  </section>
+    
+  </form> </section>
 
   <section id="modulo-valoramostupiso-1" seccionPostHog="Rate Property" class="modulo-valoramostupiso unset">
     <div class="contenedor-valoracion">
